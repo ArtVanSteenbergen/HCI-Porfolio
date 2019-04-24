@@ -1,6 +1,15 @@
 * {
   font-family: sans-serif; }
 
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
 * {
   box-sizing: border-box; }
 
@@ -10,26 +19,34 @@ body {
   grid-template-areas: "." "." ".";
   grid-template-rows: auto 1fr auto;
   min-height: 100vh; }
+  body.topics section:nth-child(even) {
+    background: #a7d2fb; }
   body.topics h1, body.topics h2, body.topics h3 {
     color: #05396B; }
-  body.workshops h1, body.workshops h2, body.workshops h3 {
-    color: #0B6E4F; }
-  body.excursion h1, body.excursion h2, body.excursion h3 {
-    color: #FA9F42; }
-  body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
-    color: #721817; }
+  body.workshops {
+    background: #b4f7e2; }
+    body.workshops h1, body.workshops h2, body.workshops h3 {
+      color: #0B6E4F; }
+  body.excursion {
+    background: white; }
+    body.excursion h1, body.excursion h2, body.excursion h3 {
+      color: #FA9F42; }
+  body.lab-weeks {
+    background: #f4c8c7; }
+    body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
+      color: #721817; }
 
 main {
   background: white;
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 1em; }
-  main section {
-    padding: 2em; }
+  width: 100%;
+  padding-top: 3em; }
+  main article {
+    padding: 2em 1em; }
 
 @media screen and (min-width: 1024px) {
-  main {
-    min-width: 1024px; } }
+  main article {
+    margin: 0 auto;
+    width: 1024px; } }
 footer {
   background: #05396B;
   color: #FFFFFF;
