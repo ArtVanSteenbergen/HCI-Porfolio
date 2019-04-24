@@ -62,7 +62,7 @@ nav ul {
   list-style: none; }
   nav ul li {
     flex-grow: 1;
-    position: relative; }
+    position: initial; }
     nav ul li a, nav ul li p {
       display: block;
       padding: 1em;
@@ -71,7 +71,8 @@ nav ul {
       color: #FFFFFF;
       text-decoration: none;
       text-align: center;
-      margin: 0; }
+      margin: 0;
+      cursor: pointer; }
     nav ul li ul {
       display: none;
       background: none;
@@ -80,7 +81,8 @@ nav ul {
       margin: 0;
       position: absolute;
       width: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      left: 0; }
       nav ul li ul li {
         margin: 0;
         padding: 0; }
@@ -149,6 +151,10 @@ nav ul {
     display: none; }
 
   #main-nav {
-    display: block; } }
+    display: block; }
+    #main-nav ul li {
+      position: relative; }
+      #main-nav ul li ul {
+        left: initial; } }
 
 /*# sourceMappingURL=style.css.map */
