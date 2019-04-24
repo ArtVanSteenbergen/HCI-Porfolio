@@ -22,12 +22,14 @@ body {
 main {
   background: white;
   margin: 0 auto;
-  min-width: 1024px;
   max-width: 100%;
   padding: 1em; }
   main section {
     padding: 2em; }
 
+@media screen and (min-width: 1024px) {
+  main {
+    min-width: 1024px; } }
 footer {
   background: #05396B;
   color: #FFFFFF;

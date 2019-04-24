@@ -26,12 +26,16 @@ body
 main
 	background: lighten($primary-color, 50%)
 	margin: 0 auto
-	min-width: 1024px
 	max-width: 100%
 	padding: 1em
 	
 	section
 		padding: 2em 
+
+@media screen and (min-width: 1024px)
+	main
+		min-width: 1024px
+
 footer
 	background: $secondary-color
 	color: $footer-color
