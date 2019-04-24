@@ -143,7 +143,9 @@ nav ul {
           background: #5d1413; }
 
 #mobile-nav {
-  display: block; }
+  display: block;
+  position: fixed;
+  width: 100%; }
   #mobile-nav .nav-label {
     display: none; }
 
