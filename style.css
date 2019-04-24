@@ -63,7 +63,7 @@ nav ul {
       nav ul li.topic:hover {
         background: #288d86; }
       nav ul li.topic li:not(:last-child) {
-        border-bottom: 2px solid #288d86; }
+        border-bottom: 1px solid #288d86; }
       nav ul li.topic li {
         background-color: #4ECDC4; }
         nav ul li.topic li:hover a {
@@ -73,7 +73,7 @@ nav ul {
       nav ul li.workshop:hover {
         background: #2bff2b; }
       nav ul li.workshop li:not(:last-child) {
-        border-bottom: 2px solid #2bff2b; }
+        border-bottom: 1px solid #2bff2b; }
       nav ul li.workshop li {
         background-color: #91ff91; }
         nav ul li.workshop li:hover a {
@@ -83,7 +83,7 @@ nav ul {
       nav ul li.excursion:hover {
         background: #ff0505; }
       nav ul li.excursion li:not(:last-child) {
-        border-bottom: 2px solid #ff0505; }
+        border-bottom: 1px solid #ff0505; }
       nav ul li.excursion li {
         background-color: #FF6B6B; }
         nav ul li.excursion li:hover a {
@@ -93,7 +93,7 @@ nav ul {
       nav ul li.lab-weeks:hover {
         background: #ffd507; }
       nav ul li.lab-weeks li:not(:last-child) {
-        border-bottom: 2px solid #ffd507; }
+        border-bottom: 1px solid #ffd507; }
       nav ul li.lab-weeks li {
         background-color: #FFE66D; }
         nav ul li.lab-weeks li:hover a {
