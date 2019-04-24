@@ -11,24 +11,32 @@ body
 	grid-template-rows: auto 1fr auto
 	min-height: 100vh
 
-	&.topics
+	&.topic
 		section:nth-child(even)
 			background: lighten($topic-color, 60%)
 		h1, h2, h3
 			color: $topic-color
+		li.topic > a
+			background: darken($topic-color, 20%)
 	&.workshop
 		section:nth-child(even)
 			background: lighten($workshop-color, 60%)
 		h1, h2, h3
 			color: $workshop-color
+		li.workshop > a
+			background: darken($workshop-color, 20%)
 	&.excursion
 		background: lighten($excursion-color, 60%)
 		h1, h2, h3
 			color: $excursion-color
+		li.excursion > a
+			background: darken($excursion-color, 20%)
 	&.lab-weeks
 		background: lighten($lab-weeks-color, 60%)
 		h1, h2, h3
 			color: $lab-weeks-color
+		li.lab-weeks > a
+			background: darken($lab-weeks-color, 20%)
 main
 	background: lighten($primary-color, 50%)
 	width: 100%

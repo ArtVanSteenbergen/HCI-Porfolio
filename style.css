@@ -30,22 +30,30 @@ body {
   grid-template-areas: "." "." ".";
   grid-template-rows: auto 1fr auto;
   min-height: 100vh; }
-  body.topics section:nth-child(even) {
+  body.topic section:nth-child(even) {
     background: #a7d2fb; }
-  body.topics h1, body.topics h2, body.topics h3 {
+  body.topic h1, body.topic h2, body.topic h3 {
     color: #05396B; }
+  body.topic li.topic > a {
+    background: #00050a; }
   body.workshop section:nth-child(even) {
     background: #b4f7e2; }
   body.workshop h1, body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
+  body.workshop li.workshop > a {
+    background: #02110c; }
   body.excursion {
     background: white; }
     body.excursion h1, body.excursion h2, body.excursion h3 {
       color: #FA9F42; }
+    body.excursion li.excursion > a {
+      background: #d06c06; }
   body.lab-weeks {
     background: #f4c8c7; }
     body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
       color: #721817; }
+    body.lab-weeks li.lab-weeks > a {
+      background: #1d0606; }
 
 main {
   background: white;
