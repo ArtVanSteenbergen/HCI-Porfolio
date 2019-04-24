@@ -109,7 +109,9 @@ nav ul {
 
 @media screen and (min-width: 640px) {
   #mobile-nav .nav-label {
-    display: block; } }
+    display: block; }
+  #mobile-nav i {
+    display: none; } }
 @media screen and (min-width: 1224px) {
   #mobile-nav {
     display: none; }
