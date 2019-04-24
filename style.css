@@ -10,6 +10,14 @@ body {
   grid-template-areas: "." "." ".";
   grid-template-rows: auto 1fr auto;
   min-height: 100vh; }
+  body.topics h1, body.topics h2, body.topics h3 {
+    color: #05396B; }
+  body.workshops h1, body.workshops h2, body.workshops h3 {
+    color: #0B6E4F; }
+  body.excursion h1, body.excursion h2, body.excursion h3 {
+    color: #FA9F42; }
+  body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
+    color: #721817; }
 
 main {
   background: white;
