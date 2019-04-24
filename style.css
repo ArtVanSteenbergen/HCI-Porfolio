@@ -30,9 +30,9 @@ body {
   grid-template-areas: "." "." ".";
   grid-template-rows: auto 1fr auto;
   min-height: 100vh; }
-  body.topics section:nth-child(even) {
+  body.topic section:nth-child(even) {
     background: #a7d2fb; }
-  body.topics h1, body.topics h2, body.topics h3 {
+  body.topic h1, body.topic h2, body.topic h3 {
     color: #05396B; }
   body.workshops {
     background: #b4f7e2; }
