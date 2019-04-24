@@ -81,9 +81,16 @@ nav
 
 #mobile-nav
 	display: block
+	.nav-label
+		display: none
 
 #main-nav
 	display: none
+
+@media screen and (min-width: 640px)
+	#mobile-nav
+		.nav-label
+			display: block
 
 @media screen and (min-width: 1224px)
 	#mobile-nav
