@@ -17,15 +17,18 @@ body
 		h1, h2, h3
 			color: $topic-color
 	&.workshop
-		background: lighten($workshop-color, 60%)
+		section:nth-child(even)
+			background: lighten($workshop-color, 60%)
 		h1, h2, h3
 			color: $workshop-color
 	&.excursion
-		background: lighten($excursion-color, 60%)
+		section:nth-child(even)
+			background: lighten($excursion-color, 60%)
 		h1, h2, h3
 			color: $excursion-color
 	&.lab-weeks
-		background: lighten($lab-weeks-color, 60%)
+		section:nth-child(even)
+			background: lighten($lab-weeks-color, 60%)
 		h1, h2, h3
 			color: $lab-weeks-color
 main

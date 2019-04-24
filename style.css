@@ -34,18 +34,18 @@ body {
     background: #a7d2fb; }
   body.topic h1, body.topic h2, body.topic h3 {
     color: #05396B; }
-  body.workshop {
+  body.workshop section:nth-child(even) {
     background: #b4f7e2; }
-    body.workshop h1, body.workshop h2, body.workshop h3 {
-      color: #0B6E4F; }
-  body.excursion {
+  body.workshop h1, body.workshop h2, body.workshop h3 {
+    color: #0B6E4F; }
+  body.excursion section:nth-child(even) {
     background: white; }
-    body.excursion h1, body.excursion h2, body.excursion h3 {
-      color: #FA9F42; }
-  body.lab-weeks {
+  body.excursion h1, body.excursion h2, body.excursion h3 {
+    color: #FA9F42; }
+  body.lab-weeks section:nth-child(even) {
     background: #f4c8c7; }
-    body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
-      color: #721817; }
+  body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
+    color: #721817; }
 
 main {
   background: white;
