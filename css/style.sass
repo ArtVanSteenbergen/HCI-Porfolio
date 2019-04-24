@@ -16,8 +16,9 @@ body
 			background: lighten($topic-color, 60%)
 		h1, h2, h3
 			color: $topic-color
-	&.workshops
-		background: lighten($workshop-color, 60%)
+	&.workshop
+		section:nth-child(even)
+			background: lighten($workshop-color, 60%)
 		h1, h2, h3
 			color: $workshop-color
 	&.excursion

@@ -23,10 +23,10 @@ body {
     background: #a7d2fb; }
   body.topics h1, body.topics h2, body.topics h3 {
     color: #05396B; }
-  body.workshops {
+  body.workshop section:nth-child(even) {
     background: #b4f7e2; }
-    body.workshops h1, body.workshops h2, body.workshops h3 {
-      color: #0B6E4F; }
+  body.workshop h1, body.workshop h2, body.workshop h3 {
+    color: #0B6E4F; }
   body.excursion {
     background: white; }
     body.excursion h1, body.excursion h2, body.excursion h3 {
