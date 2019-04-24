@@ -63,7 +63,7 @@ nav ul {
   nav ul li {
     flex-grow: 1;
     position: relative; }
-    nav ul li a {
+    nav ul li a, nav ul li p {
       display: block;
       padding: 1em;
       font: 100% Helvetica, sans-serif;
