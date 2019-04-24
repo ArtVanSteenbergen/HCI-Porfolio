@@ -39,7 +39,7 @@ body {
   body.workshop h1, body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
   body.excursion section:nth-child(even) {
-    background: white; }
+    background: #fdd1a5; }
   body.excursion h1, body.excursion h2, body.excursion h3 {
     color: #FA9F42; }
   body.lab-weeks section:nth-child(even) {
