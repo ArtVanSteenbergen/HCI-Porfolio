@@ -1,0 +1,102 @@
+* {
+  font-family: sans-serif; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas: "." "." ".";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; }
+
+main {
+  background: white;
+  margin: 0 auto;
+  min-width: 1024px;
+  max-width: 100%;
+  padding: 1em; }
+
+footer {
+  background: #05396B;
+  color: #FFFFFF;
+  padding: 1em; }
+  footer p {
+    margin: 0; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style: none; }
+  nav ul li {
+    flex-grow: 1;
+    position: relative; }
+    nav ul li a {
+      display: block;
+      padding: 1em;
+      font: 100% Helvetica, sans-serif;
+        font-weight: bold;
+      color: #05396B;
+      text-decoration: none;
+      text-align: center; }
+    nav ul li ul {
+      display: none;
+      background: none;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      overflow: hidden; }
+      nav ul li ul li {
+        margin: 0;
+        padding: 0; }
+        nav ul li ul li a {
+          text-align: left; }
+    nav ul li:hover ul {
+      display: block; }
+    nav ul li.topic {
+      background: #4ECDC4; }
+      nav ul li.topic:hover {
+        background: #288d86; }
+      nav ul li.topic li:not(:last-child) {
+        border-bottom: 2px solid #288d86; }
+      nav ul li.topic li {
+        background-color: #4ECDC4; }
+        nav ul li.topic li:hover a {
+          background: #288d86; }
+    nav ul li.workshop {
+      background: #91ff91; }
+      nav ul li.workshop:hover {
+        background: #2bff2b; }
+      nav ul li.workshop li:not(:last-child) {
+        border-bottom: 2px solid #2bff2b; }
+      nav ul li.workshop li {
+        background-color: #91ff91; }
+        nav ul li.workshop li:hover a {
+          background: #2bff2b; }
+    nav ul li.excursion {
+      background: #FF6B6B; }
+      nav ul li.excursion:hover {
+        background: #ff0505; }
+      nav ul li.excursion li:not(:last-child) {
+        border-bottom: 2px solid #ff0505; }
+      nav ul li.excursion li {
+        background-color: #FF6B6B; }
+        nav ul li.excursion li:hover a {
+          background: #ff0505; }
+    nav ul li.lab-weeks {
+      background: #FFE66D; }
+      nav ul li.lab-weeks:hover {
+        background: #ffd507; }
+      nav ul li.lab-weeks li:not(:last-child) {
+        border-bottom: 2px solid #ffd507; }
+      nav ul li.lab-weeks li {
+        background-color: #FFE66D; }
+        nav ul li.lab-weeks li:hover a {
+          background: #ffd507; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,80 @@
+nav
+	ul
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+		list-style: none
+		li
+			flex-grow: 1
+			position: relative
+			a
+				display: block
+				padding: 1em
+				font: 100% $font-stack
+					weight: bold
+				color: $secondary-color
+				text-decoration: none
+				text-align: center
+			ul
+				display: none
+				background: none
+				flex-direction: column
+				padding: 0
+				margin: 0
+				position: absolute
+				width: 100%
+				overflow: hidden
+				li
+					margin: 0
+					padding: 0
+					a
+						text-align: left
+			&:hover
+				ul
+					display: block
+
+			&.topic
+				background: $topic-color
+				&:hover
+					background: darken($topic-color, 20%)
+				li:not(:last-child)
+					border-bottom: 2px solid darken($topic-color, 20%)
+				li
+					background-color: $topic-color
+					&:hover
+						a
+							background: darken($topic-color, 20%)
+			&.workshop
+				background: $workshop-color
+				&:hover
+					background: darken($workshop-color, 20%)
+				li:not(:last-child)
+					border-bottom: 2px solid darken($workshop-color, 20%)
+				li
+					background-color: $workshop-color
+					&:hover
+						a
+							background: darken($workshop-color, 20%)
+			&.excursion
+				background: $excursion-color
+				&:hover
+					background: darken($excursion-color, 20%)
+				li:not(:last-child)
+					border-bottom: 2px solid darken($excursion-color, 20%)
+				li
+					background-color: $excursion-color
+					&:hover
+						a
+							background: darken($excursion-color, 20%)
+			&.lab-weeks
+				background: $lab-weeks-color
+				&:hover
+					background: darken($lab-weeks-color, 20%)
+				li:not(:last-child)
+					border-bottom: 2px solid darken($lab-weeks-color, 20%)
+				li
+					background-color: $lab-weeks-color
+					&:hover
+						a
+							background: darken($lab-weeks-color, 20%)
