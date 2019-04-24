@@ -99,4 +99,17 @@ nav ul {
         nav ul li.lab-weeks li:hover a {
           background: #5d1413; }
 
+#mobile-nav {
+  display: block; }
+
+#main-nav {
+  display: none; }
+
+@media screen and (min-width: 1224px) {
+  #mobile-nav {
+    display: none; }
+
+  #main-nav {
+    display: block; } }
+
 /*# sourceMappingURL=style.css.map */

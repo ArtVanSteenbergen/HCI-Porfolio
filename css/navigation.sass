@@ -78,3 +78,15 @@ nav
 					&:hover
 						a
 							background: darken($lab-weeks-color, 5%)
+
+#mobile-nav
+	display: block
+
+#main-nav
+	display: none
+
+@media screen and (min-width: 1224px)
+	#mobile-nav
+		display: none
+	#main-nav
+		display: block
