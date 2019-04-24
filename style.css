@@ -34,9 +34,9 @@ body {
     background: #a7d2fb; }
   body.topic h1, body.topic h2, body.topic h3 {
     color: #05396B; }
-  body.workshops {
+  body.workshop {
     background: #b4f7e2; }
-    body.workshops h1, body.workshops h2, body.workshops h3 {
+    body.workshop h1, body.workshop h2, body.workshop h3 {
       color: #0B6E4F; }
   body.excursion {
     background: white; }
