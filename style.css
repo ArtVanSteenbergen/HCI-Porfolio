@@ -17,6 +17,8 @@ main {
   min-width: 1024px;
   max-width: 100%;
   padding: 1em; }
+  main section {
+    padding: 2em; }
 
 footer {
   background: #05396B;
