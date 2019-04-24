@@ -59,44 +59,44 @@ nav ul {
     nav ul li:hover ul {
       display: block; }
     nav ul li.topic {
-      background: #44355B; }
+      background: #05396B; }
       nav ul li.topic:hover {
-        background: #140f1b; }
+        background: #042c53; }
       nav ul li.topic li:not(:last-child) {
-        border-bottom: 1px solid #140f1b; }
+        border-bottom: 1px solid #042c53; }
       nav ul li.topic li {
-        background-color: #44355B; }
+        background-color: #05396B; }
         nav ul li.topic li:hover a {
-          background: #140f1b; }
+          background: #042c53; }
     nav ul li.workshop {
       background: #0B6E4F; }
       nav ul li.workshop:hover {
-        background: #02110c; }
+        background: #09573e; }
       nav ul li.workshop li:not(:last-child) {
-        border-bottom: 1px solid #02110c; }
+        border-bottom: 1px solid #09573e; }
       nav ul li.workshop li {
         background-color: #0B6E4F; }
         nav ul li.workshop li:hover a {
-          background: #02110c; }
+          background: #09573e; }
     nav ul li.excursion {
       background: #FA9F42; }
       nav ul li.excursion:hover {
-        background: #d06c06; }
+        background: #f99229; }
       nav ul li.excursion li:not(:last-child) {
-        border-bottom: 1px solid #d06c06; }
+        border-bottom: 1px solid #f99229; }
       nav ul li.excursion li {
         background-color: #FA9F42; }
         nav ul li.excursion li:hover a {
-          background: #d06c06; }
+          background: #f99229; }
     nav ul li.lab-weeks {
       background: #721817; }
       nav ul li.lab-weeks:hover {
-        background: #1d0606; }
+        background: #5d1413; }
       nav ul li.lab-weeks li:not(:last-child) {
-        border-bottom: 1px solid #1d0606; }
+        border-bottom: 1px solid #5d1413; }
       nav ul li.lab-weeks li {
         background-color: #721817; }
         nav ul li.lab-weeks li:hover a {
-          background: #1d0606; }
+          background: #5d1413; }
 
 /*# sourceMappingURL=style.css.map */
