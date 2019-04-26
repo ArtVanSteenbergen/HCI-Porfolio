@@ -46,6 +46,18 @@ body {
     background: #f4c8c7; }
   body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
     color: #721817; }
+  body .expectations {
+    padding: 0; }
+    body .expectations h3 {
+      background: #05396B;
+      color: #FFFFFF;
+      margin: 0;
+      color: #fff;
+      padding: 0.5em 1em; }
+    body .expectations p {
+      background: #a7d2fb;
+      padding: 1em;
+      margin: 0; }
 
 main {
   background: white;
@@ -63,18 +75,6 @@ footer {
   color: #FFFFFF;
   padding: 1em; }
   footer p {
-    margin: 0; }
-
-.expectations {
-  padding: 0; }
-  .expectations h3 {
-    background: #05396B;
-    margin: 0;
-    color: #fff;
-    padding: 0.5em 1em; }
-  .expectations p {
-    background: #a7d2fb;
-    padding: 1em;
     margin: 0; }
 
 nav ul {
