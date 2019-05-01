@@ -48,6 +48,17 @@ nav
 					&:hover
 						a
 							background: darken($topic-color, 5%)
+			&.home-link
+				background: $black-color
+				&:hover
+					background: darken($topic-color, 5%)
+				li:not(:last-child)
+					border-bottom: 1px solid darken($topic-color, 5%)
+				li
+					background-color: $black-color
+					&:hover
+						a
+							background: darken($topic-color, 5%)
 			&.workshop
 				background: $workshop-color
 				&:hover

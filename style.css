@@ -123,6 +123,16 @@ nav ul {
         background-color: #05396B; }
         nav ul li.topic li:hover a {
           background: #042c53; }
+    nav ul li.home-link {
+      background: #000000; }
+      nav ul li.home-link:hover {
+        background: #042c53; }
+      nav ul li.home-link li:not(:last-child) {
+        border-bottom: 1px solid #042c53; }
+      nav ul li.home-link li {
+        background-color: #000000; }
+        nav ul li.home-link li:hover a {
+          background: #042c53; }
     nav ul li.workshop {
       background: #0B6E4F; }
       nav ul li.workshop:hover {
