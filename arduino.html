@@ -181,24 +181,24 @@
 				<h3>BLINK MULTIPLE LEDS</h3>
 				<img class="gif" src="gifs/exercise-3c-blink-multiple-leds.gif" >
 				<pre>
-					int greenLedPin = 10;
-					int yellowLedPin = 9;
-					void setup() {
-					 pinMode(greenLedPin, OUTPUT);
-					 pinMode(yellowLedPin, OUTPUT);
-					}
-					void loop() {
-					 analogWrite(greenLedPin, 0); // turn on the green LED off
-					 analogWrite(yellowLedPin, 0); // turn on the yellow LED off
-					 delay(500); // wait 500ms
-					 analogWrite(yellowLedPin, 255); // turn the yellow LED maximally
-					 delay(500); // wait 500ms
-					 analogWrite(greenLedPin, 255); // turn on the green LED maximally
-					 analogWrite(yellowLedPin, 0); // turn on the yellow LED off
-					 delay(500); // wait 500ms
-					 analogWrite(yellowLedPin, 255); // turn on the yellow LED maximally
-					 delay(500); // wait 500ms
-					}
+	int greenLedPin = 10;
+	int yellowLedPin = 9;
+	void setup() {
+	 pinMode(greenLedPin, OUTPUT);
+	 pinMode(yellowLedPin, OUTPUT);
+	}
+	void loop() {
+	 analogWrite(greenLedPin, 0); // turn on the green LED off
+	 analogWrite(yellowLedPin, 0); // turn on the yellow LED off
+	 delay(500); // wait 500ms
+	 analogWrite(yellowLedPin, 255); // turn the yellow LED maximally
+	 delay(500); // wait 500ms
+	 analogWrite(greenLedPin, 255); // turn on the green LED maximally
+	 analogWrite(yellowLedPin, 0); // turn on the yellow LED off
+	 delay(500); // wait 500ms
+	 analogWrite(yellowLedPin, 255); // turn on the yellow LED maximally
+	 delay(500); // wait 500ms
+	}
 				</pre>
 			</article>
 			<article>
