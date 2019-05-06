@@ -70,7 +70,14 @@ pre {
   background: #000000;
   color: #FFFFFF;
   padding: 1em 0;
-  border-radius: 3px; }
+  border-radius: 3px;
+  counter-reset: line; }
+
+code {
+  counter-increment: line; }
+  code:before {
+    content: counter(line);
+    user-select: none; }
 
 @media screen and (min-width: 1024px) {
   main article {

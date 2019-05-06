@@ -56,6 +56,13 @@ pre
 	color: $white-color
 	padding: 1em 0
 	border-radius: 3px
+	counter-reset: line
+
+code
+	counter-increment: line
+	&:before
+		content: counter(line)
+		user-select: none
 
 @media screen and (min-width: 1024px)
 	main
