@@ -59,6 +59,9 @@ body {
       padding: 1em;
       margin: 0; }
 
+header {
+  z-index: 999; }
+
 main {
   background: white;
   width: 100%;
