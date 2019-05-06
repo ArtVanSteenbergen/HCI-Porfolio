@@ -66,6 +66,10 @@ main {
   main article {
     padding: 2em 1em; }
 
+.gif {
+  width: 100%;
+  display: block; }
+
 pre {
   background: #000000;
   color: #FFFFFF;
@@ -77,7 +81,15 @@ code {
   counter-increment: line; }
   code:before {
     content: counter(line);
-    user-select: none; }
+    user-select: none;
+    color: grey;
+    padding-right: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 2em;
+    font-style: italic;
+    border-right: 1px solid grey;
+    text-align: right; }
 
 @media screen and (min-width: 1024px) {
   main article {
