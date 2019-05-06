@@ -188,13 +188,13 @@
 <code> 	inMode(yellowLedPin, OUTPUT);</code>
 <code>}</code>
 <code>void loop() {</code>
-<code>	analogWrite(greenLedPin, 0); // turn on the green LED off</code>
-<code>	analogWrite(yellowLedPin, 0); // turn on the yellow LED off</code>
+<code>	analogWrite(greenLedPin, 0); // turn the green LED off</code>
+<code>	analogWrite(yellowLedPin, 0); // turn the yellow LED off</code>
 <code>	delay(500); // wait 500ms</code>
-<code>	analogWrite(yellowLedPin, 255); // turn the yellow LED maximally</code>
+<code>	analogWrite(yellowLedPin, 255); // turn on the yellow LED maximally</code>
 <code>	delay(500); // wait 500ms</code>
 <code>	analogWrite(greenLedPin, 255); // turn on the green LED maximally</code>
-<code>	analogWrite(yellowLedPin, 0); // turn on the yellow LED off</code>
+<code>	analogWrite(yellowLedPin, 0); // turn the yellow LED off</code>
 <code>	delay(500); // wait 500ms</code>
 <code>	analogWrite(yellowLedPin, 255); // turn on the yellow LED maximally</code>
 <code>	delay(500); // wait 500ms</code>

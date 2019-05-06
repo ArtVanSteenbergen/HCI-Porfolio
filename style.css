@@ -78,7 +78,13 @@ pre {
   color: #FFFFFF;
   padding: 1em 0;
   border-radius: 3px;
-  counter-reset: line; }
+  counter-reset: line;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; }
 
 code {
   counter-increment: line; }
@@ -90,6 +96,7 @@ code {
     margin-right: 10px;
     display: inline-block;
     width: 2em;
+    height: 2em;
     font-style: italic;
     border-right: 1px solid grey;
     text-align: right; }
