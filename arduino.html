@@ -221,10 +221,25 @@
 </pre>
 			</article>
 			<article>
-				<h3>POTMETER VALUE - ANOLOG INPUT</h3>
-			</article>
-			<article>
 				<h3>CONTROLLING A LED WITH A POTMETER</h3>
+				<img class="gif" src="gifs/exercise-6c-controling-a-led-with-a-potmeter.gif" >
+<pre>
+<code>float sensorValue = 0;</code>
+<code>int sensorPin = A0;</code>
+<code>int greenLedPin = 10;</code>
+<code>void setup() {</code>
+<code>	Serial.begin(9600);</code>
+<code>	pinMode(sensorPin, INPUT);</code>
+<code>	pinMode(greenLedPin, OUTPUT);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	sensorValue = analogRead(sensorPin);</code>
+<code>	sensorValue = (sensorValue/1023)*255;</code>
+<code>	analogWrite(greenLedPin, sensorValue);</code>
+<code>	Serial.println(sensorValue);</code>
+<code>	delay(100);</code>
+<code>}</code>
+</pre>
 			</article>
 			<article>
 				<h3>CONTROL THE LED WITH LIGHT</h3>
