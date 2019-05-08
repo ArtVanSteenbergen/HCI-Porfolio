@@ -83,6 +83,8 @@ main {
   right: 0;
   padding: 32px;
   cursor: pointer; }
+  .breadboard:active {
+    background: none; }
 
 pre {
   background: #000000;
