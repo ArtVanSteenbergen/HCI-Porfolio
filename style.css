@@ -67,11 +67,22 @@ main {
   width: 100%;
   padding-top: 3em; }
   main article {
-    padding: 2em 1em; }
+    padding: 2em 1em;
+    position: relative; }
 
 .gif {
   width: 100%;
   display: block; }
+
+.img {
+  max-width: 100%; }
+
+.breadboard {
+  max-width: 128px;
+  position: absolute;
+  right: 0;
+  padding: 32px;
+  cursor: pointer; }
 
 pre {
   background: #000000;
