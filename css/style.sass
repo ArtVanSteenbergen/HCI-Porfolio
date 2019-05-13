@@ -79,6 +79,7 @@ main
 pre
 	background: $black-color
 	color: $white-color
+	max-width: 90vw
 	border-radius: 3px
 	counter-reset: line
 	overflow-x: auto
@@ -98,6 +99,7 @@ pre
 		background: $arduino-color
 	code
 		counter-increment: line
+		tab-size: 0.5em
 		&:first-child
 			line-height: 2em
 		&:before
@@ -122,24 +124,30 @@ pre
 
 
 
-.fa-film
+.fa-film,
+.fa-music
 	font-size: 64px
 	cursor: pointer
+	color: $arduino-color
 
 blockquote span
 	&.light
 		font-weight: bold
 		color: $white-color
-		text-shadow: 0 0 8px #ff0
+		text-shadow: 0 0 2px $black-color, 0 0 8px #ff0
 	&.dark
 		font-weight: bold
 		text-shadow: 0 0 2px $black-color
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 1056px)
 	main
 		article
 			margin: 0 auto
 			width: 1024px
+			box-sizing: border-box
+	pre
+		code
+			tab-size: 2em
 
 footer
 	background: $secondary-color

@@ -299,28 +299,28 @@
 					<strong>V</strong><i>out</i> = <strong>V</strong><i>in</i> * R2:(R1 * R2) = <strong>V</strong><i>out</i>
 				</blockquote>
 				<p>For example we can fill in this formula with differend light inputs to calculate the voltage output.</p>
-				<h3>Left resistor dark and right resistor light:</h3>
+				<h3>Left resistor in the dark and right resistor in the light:</h3>
 				<blockquote>
 					<span class="dark">R1</span> = 5<i>megohm</i><br/>
 					<span class="light">R2</span> = 200<i>ohm</i><br/>
 					<strong>V</strong><i>in</i> = 5v<br/>
 					<strong>5v * 200<i>ohm</i> : (5<i>megohm</i> + 200<i>ohm</i>) = ~0v</strong>
 				</blockquote>
-				<h3>Left resistor light and right resistor dark:</h3>
+				<h3>Left resistor in the light and right resistor in the dark:</h3>
 				<blockquote>
 					<span class="light">R1</span> = 200<i>ohm</i><br/>
 					<span class="dark">R2</span> = 5<i>megohm</i><br/>
 					<strong>V</strong><i>in</i> = 5v<br/>
 					<strong>5v * 5<i>megohm</i> : (200<i>ohm</i> + 5<i>megohm</i>) = ~5v</strong>
 				</blockquote>
-				<h3>Both resistors light:</h3>
+				<h3>Both resistors in the light:</h3>
 				<blockquote>
 					<span class="light">R1</span> = 200<i>ohm</i><br/>
 					<span class="light">R2</span> = 200<i>ohm</i><br/>
 					<strong>V</strong><i>in</i> = 5v<br/>
 					<strong>5v * 200<i>ohm</i> : (200<i>ohm</i> + 200<i>ohm</i>) = 2.5v</strong>
 				</blockquote>
-				<h3>Both resistors dark:</h3>
+				<h3>Both resistors in the dark:</h3>
 				<blockquote>
 					<span class="dark">R1</span> = 5<i>megohm</i> <br/>
 					<span class="dark">R2</span> = 5<i>megohm</i> <br/>
@@ -368,6 +368,7 @@
 			</article>
 			<article>
 				<h3>BUTTONS</h3>
+				<img class="breadboard" src="img/10f.png" alt="Circuit layout of buttons assignment" />
 <pre>
 <code>int ledPin = 13;</code>
 <code>int buttonPinL = 3;</code>
@@ -389,10 +390,11 @@
 <code>	}</code>
 <code>}</code>
 </pre>
+				<i class="fas fa-film" data-gif="gifs/excercise-10f-buttons.gif"></i>
 			</article>
 			<article>
 				<h3>SERVOMOTOR</h3>
-
+				<img class="breadboard" src="img/11b.png" alt="Circuit layout of servomotor assignment" />
 <pre>
 <code>#include <Servo.h></code>
 <code>Servo myServo;</code>
@@ -422,6 +424,7 @@
 			</article>
 			<article>
 				<h3>CONTROLLING THE SERVO WITH INPUTS</h3>
+				<img class="breadboard" src="img/12b.png" alt="Circuit layout of controlling the servo with inputs assignment" />
 <pre>
 <code>#include <Servo.h></code>
 <code>Servo myServo;</code>
@@ -458,6 +461,8 @@
 			</article>
 			<article>
 				<h3>SOUND</h3>
+
+				<i class="fas fa-music"></i>
 			</article>
 		</section>
 	</main>
