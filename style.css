@@ -96,12 +96,7 @@ pre {
   max-width: 90vw;
   border-radius: 3px;
   counter-reset: line;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word; }
+  overflow-x: auto; }
   pre:before {
     content: "Arduino IDE";
     font-weight: bold;
@@ -113,7 +108,8 @@ pre {
     background: #006468; }
   pre code {
     counter-increment: line;
-    tab-size: 0.5em; }
+    tab-size: 0.5em;
+    padding-right: 1em; }
     pre code:first-child {
       line-height: 2em; }
     pre code:before {

@@ -169,16 +169,17 @@
 		<section>
 			<article>
 				<h1>Arduino</h1>
+				<p>An Arduino is <q>Open-source electronic prototyping platform enabling users to create interactive electronic objects.</q> - <a href="https://arduino.cc">Arduino.cc</a>. To get a better understanding about what's possible to use as an intput or output device, me and my fellow student where able to learn the basics of prototyping with an Arduino with multiple sensors, lights, resistors, wires and other small electronics. To summeries what I have learned from these workshops, I put a few of the assignments on this page.</p>
 			</article>
 		</section>
 		<section id="assignments">
 			<article>
 				<h2>Assignments</h2>
-
-				
+				<p>Here is a summary of the assignments I did during the workshops.</p>
 			</article>
 			<article>
 				<h3>BLINK MULTIPLE LEDS</h3>
+				<p>The first excercise was to make a led on the arduio board blink. After that it was time to hook up the breadboard to the Arduino and let the LED from our starterpack burn on it's own. The perticular excercise I want to showcase here is the one where we needed to make 2 LEDs blink at the same time but on twice as fast as the other. You can see the code used and the circuit layout below. To see the result you must click on the film icon.</p>
 				<img class="breadboard" src="img/3c.png" alt="Circuit layout of Blink Multiple LEDS assignment" />
 <pre>
 <code>int greenLedPin = 10;</code>
@@ -204,6 +205,7 @@
 			</article>
 			<article>
 				<h3>FADE LED - ANALOG OUTPUT</h3>
+				<p>A lot more is possible then to just put a LED on and off. With the analog write function you can make the LEDs fade in and out. In this example the objective was to make the green LED fade in while the yellow LED fades out.</p>
 				<img class="breadboard" src="img/3c.png" alt="Circuit layout of Fade LED Analog Output assignment" />
 <pre>
 <code>int greenLedPin = 10;</code>
@@ -224,6 +226,7 @@
 			</article>
 			<article>
 				<h3>CONTROLLING A LED WITH A POTMETER</h3>
+				<p>It's also possible to control the LEDs with a potentiometer. By putting a current through the potmeter and connecting it to the Arduino we can read its value. Then it's posible to use this value to control the LED.</p>
 				<img class="breadboard" src="img/6c.png" alt="Circuit layout of Controlling a LED with a potmeter assignment" />
 <pre>
 <code>float sensorValue = 0;</code>
@@ -246,6 +249,7 @@
 			</article>
 			<article>
 				<h3>CONTROL THE LED WITH LIGHT</h3>
+				<p>A Light-Dependent Resistor or LDR is, as the name suggestes, a resistor that has it's resistance depending on the amount of light it;s resieving. So in complete darkness the LDR's resistance is about 5,000,000<i>ohm</i> or 5<i>megohm</i> and with a very bright light shining on it it's about 200<i>ohm</i>. By mapping the output of this sensor we can control the LED.</p>
 				<img class="breadboard" src="img/7.png" alt="Circuit layout of Control the LED with light assignment" />
 <pre>
 <code>float sensorValue = 0;</code>
@@ -271,6 +275,7 @@
 			</article>
 			<article>
 				<h3>VOLTAGE DIVIDER</h3>
+				<p>This excercise used the same code as the previous one. The only difference to the breadboard is that a resistor was replaced with another LDR. In this assignment we needed to explain what happens when the resisor is replaced.</p>
 				<img class="breadboard" src="img/8.png" alt="Circuit layout of Voltage devider assignment" />
 <pre>
 <code>float sensorValue = 0;</code>
@@ -292,7 +297,6 @@
 <code>	delay(200);</code>
 <code>}</code>
 </pre>
-				<p>This excercise used the same code as the previous one. The only difference to the breadboard is that a resistor was replaced with another LDR. In this assignment we needed to explain what happens when the resisor is replaced.</p>
 				<i class="fas fa-film" data-gif="gifs/exercise-8-voltage-devider.gif"></i>
 				<p>We can calculate what happens with this formula:</p>
 				<blockquote>
