@@ -21,6 +21,7 @@ $(document).on('click', function(event) {
 	}
 });
 
+
 $('nav > ul > li').on('mouseenter', function() {
 	staggerSubNav($(this).find('li'));
 });
@@ -34,3 +35,5 @@ $('.fa-film').on('click', function(){
 $( "code:contains('greenLedPin')" ).css( "color", "green" );
 $( "code:contains('yellowLedPin')" ).css( "color", "yellow" );
 $( "code:contains('redLedPin')" ).css( "color", "red" );
+
+TweenMax.from('code', 5, {color: '#fff', ease: Power4.easeOut});
