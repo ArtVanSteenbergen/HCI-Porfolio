@@ -200,7 +200,7 @@
 <code>	delay(500);</code>
 <code>}</code>
 </pre>
-				<img class="gif" src="gifs/exercise-3c-blink-multiple-leds.gif" >
+				<i class="fas fa-film" data-gif="gifs/exercise-3c-blink-multiple-leds.gif"></i>
 			</article>
 			<article>
 				<h3>FADE LED - ANALOG OUTPUT</h3>
@@ -220,7 +220,7 @@
 <code>	}</code>
 <code>}</code>
 </pre>
-				<img class="gif" src="gifs/exercise-4c-fade-leds-analog-output.gif" >
+				<i class="fas fa-film" data-gif="gifs/exercise-4c-fade-leds-analog-output.gif"></i>
 			</article>
 			<article>
 				<h3>CONTROLLING A LED WITH A POTMETER</h3>
@@ -242,25 +242,219 @@
 <code>	delay(100);</code>
 <code>}</code>
 </pre>
-				<img class="gif" src="gifs/exercise-6c-controling-a-led-with-a-potmeter.gif" >
+				<i class="fas fa-film" data-gif="gifs/exercise-6c-controling-a-led-with-a-potmeter.gif"></i>
 			</article>
 			<article>
 				<h3>CONTROL THE LED WITH LIGHT</h3>
+				<img class="breadboard" src="img/7.png" alt="Circuit layout of Control the LED with light assignment" />
+<pre>
+<code>float sensorValue = 0;</code>
+<code>int sensorPin = A0;</code>
+<code>int greenLedPin = 10;</code>
+<code>int yellowLedPin = 9;</code>
+<code>void setup() {</code>
+<code>	pinMode(sensorPin, INPUT);</code>
+<code>	Serial.begin(9600);</code>
+<code>	pinMode(greenLedPin, OUTPUT);</code>
+<code>  pinMode(yellowLedPin, OUTPUT);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	sensorValue = analogRead(sensorPin);</code>
+<code>	Serial.println(sensorValue);</code>
+<code>	sensorValue = map(sensorValue, 550, 795, 255, 0);</code>
+<code>	analogWrite(greenLedPin, sensorValue);</code>
+<code>	analogWrite(yellowLedPin, sensorValue);</code>
+<code>	delay(200);</code>
+<code>}</code>
+</pre>
+				<i class="fas fa-film" data-gif="gifs/exercise-7-control-the-led-with-light.gif" ></i>
 			</article>
 			<article>
 				<h3>VOLTAGE DIVIDER</h3>
+				<img class="breadboard" src="img/8.png" alt="Circuit layout of Voltage devider assignment" />
+<pre>
+<code>float sensorValue = 0;</code>
+<code>int sensorPin = A0;</code>
+<code>int greenLedPin = 10;</code>
+<code>int yellowLedPin = 9;</code>
+<code>void setup() {</code>
+<code>	pinMode(sensorPin, INPUT);</code>
+<code>	Serial.begin(9600);</code>
+<code>	pinMode(greenLedPin, OUTPUT);</code>
+<code>  pinMode(yellowLedPin, OUTPUT);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	sensorValue = analogRead(sensorPin);</code>
+<code>	Serial.println(sensorValue);</code>
+<code>	sensorValue = map(sensorValue, 550, 795, 255, 0);</code>
+<code>	analogWrite(greenLedPin, sensorValue);</code>
+<code>	analogWrite(yellowLedPin, sensorValue);</code>
+<code>	delay(200);</code>
+<code>}</code>
+</pre>
+				<p>This excercise used the same code as the previous one. The only difference to the breadboard is that a resistor was replaced with another LDR. In this assignment we needed to explain what happens when the resisor is replaced.</p>
+				<i class="fas fa-film" data-gif="gifs/exercise-8-voltage-devider.gif"></i>
+				<p>We can calculate what happens with this formula:</p>
+				<blockquote>
+					<strong>V</strong><i>out</i> = <strong>V</strong><i>in</i> * R2:(R1 * R2) = <strong>V</strong><i>out</i>
+				</blockquote>
+				<p>For example we can fill in this formula with differend light inputs to calculate the voltage output.</p>
+				<h3>Left resistor dark and right resistor light:</h3>
+				<blockquote>
+					<span class="dark">R1</span> = 5<i>megohm</i><br/>
+					<span class="light">R2</span> = 200<i>ohm</i><br/>
+					<strong>V</strong><i>in</i> = 5v<br/>
+					<strong>5v * 200<i>ohm</i> : (5<i>megohm</i> + 200<i>ohm</i>) = ~0v</strong>
+				</blockquote>
+				<h3>Left resistor light and right resistor dark:</h3>
+				<blockquote>
+					<span class="light">R1</span> = 200<i>ohm</i><br/>
+					<span class="dark">R2</span> = 5<i>megohm</i><br/>
+					<strong>V</strong><i>in</i> = 5v<br/>
+					<strong>5v * 5<i>megohm</i> : (200<i>ohm</i> + 5<i>megohm</i>) = ~5v</strong>
+				</blockquote>
+				<h3>Both resistors light:</h3>
+				<blockquote>
+					<span class="light">R1</span> = 200<i>ohm</i><br/>
+					<span class="light">R2</span> = 200<i>ohm</i><br/>
+					<strong>V</strong><i>in</i> = 5v<br/>
+					<strong>5v * 200<i>ohm</i> : (200<i>ohm</i> + 200<i>ohm</i>) = 2.5v</strong>
+				</blockquote>
+				<h3>Both resistors dark:</h3>
+				<blockquote>
+					<span class="dark">R1</span> = 5<i>megohm</i> <br/>
+					<span class="dark">R2</span> = 5<i>megohm</i> <br/>
+					<strong>V</strong><i>in</i> = 5v<br/>
+					<strong>5v * 5<i>megohm</i> : (5<i>megohm</i> + 5<i>megohm</i>) = 2.5v</strong>
+				</blockquote>
 			</article>
 			<article>
 				<h3>ARDUINO AND PROCESSING</h3>
+				<img class="breadboard" src="img/9.png" alt="Circuit layout of Arduino and Processing assignment" />
+<pre>
+<code>float sensorValue = 0;</code>
+<code>int sensorPin = A0;</code>
+<code>void setup() {</code>
+<code>	pinMode(sensorPin, INPUT);</code>
+<code>	Serial.begin(9600);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	sensorValue = analogRead(sensorPin);</code>
+<code>	sensorValue = map(sensorValue, 0, 1023, 255, 0);</code>
+<code>	Serial.println(sensorValue);</code>
+<code>}</code>
+</pre>
+<pre class="processing">
+<code>import processing.serial.*;</code>
+<code>Serial myPort;</code>
+<code>String sensorReading="";</code>
+<code>void setup() {</code>
+<code>	size(400, 400);</code>
+<code>	myPort = new Serial(this, Serial.list()[2], 9600);</code>
+<code>	myPort.bufferUntil('\n');</code>
+<code>}</code>
+<code>void draw() {</code>
+<code>	background(255);</code>
+<code>	fill(float(sensorReading),0,255-float(sensorReading));</code>
+<code>	noStroke();</code>
+<code>	text("Sensor Reading: " + sensorReading, 20, 20);</code>
+<code>	rect(map(float(sensorReading),0,255,0,200),map(sin(float(sensorReading)/10),0,1,100,120), 200, 200);</code>
+<code>}</code>
+<code>void serialEvent (Serial myPort) {</code>
+<code>	sensorReading = myPort.readStringUntil('\n');</code>
+<code>}</code>
+</pre>
+				<i class="fas fa-film" data-gif="gifs/exercise-9-arduino-and-processing.gif"></i>
 			</article>
 			<article>
 				<h3>BUTTONS</h3>
+<pre>
+<code>int ledPin = 13;</code>
+<code>int buttonPinL = 3;</code>
+<code>int buttonPinR = 2;</code>
+<code>int readingL;</code>
+<code>int readingR;</code>
+<code>void setup() {</code>
+<code>	pinMode(ledPin, OUTPUT);</code>
+<code>	pinMode(buttonPinL, INPUT);</code>
+<code>	pinMode(buttonPinR, INPUT);</code>
+<code>}</code>
+<code>void loop(){</code>
+<code>	readingL = digitalRead(buttonPinL);</code>
+<code>	readingR = digitalRead(buttonPinR);</code>
+<code>	if ((readingL == HIGH && readingR == LOW) || (readingL == LOW && readingR == HIGH)) {</code>
+<code>		digitalWrite(ledPin, HIGH);  </code>
+<code>	} else {</code>
+<code>		digitalWrite(ledPin, LOW);</code>
+<code>	}</code>
+<code>}</code>
+</pre>
 			</article>
 			<article>
 				<h3>SERVOMOTOR</h3>
+
+<pre>
+<code>#include <Servo.h></code>
+<code>Servo myServo;</code>
+<code>int servoPin = 9;</code>
+<code>int pos = 0;</code>
+<code>void setup() {</code>
+<code>	myServo.attach(servoPin);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	myServo.write(0);</code>
+<code>	delay(500);</code>
+<code>	myServo.write(160);</code>
+<code>	delay(500);</code>
+<code>	myServo.write(80);</code>
+<code>	delay(500);</code>
+<code>	myServo.write(160);</code>
+<code>	delay(500);</code>
+<code>	myServo.write(0);</code>
+<code>	delay(500);</code>
+<code>	for(pos = 0; pos < 160; pos += 1){</code>
+<code>		myServo.write(pos);</code>
+<code>		delay(15);</code>
+<code>	}</code>
+<code>}</code>
+</pre>
+				<i class="fa fa-film" data-gif="gifs/exercise-11b-servomotor.gif"></i>
 			</article>
 			<article>
 				<h3>CONTROLLING THE SERVO WITH INPUTS</h3>
+<pre>
+<code>#include <Servo.h></code>
+<code>Servo myServo;</code>
+<code>int servoPin = 9;</code>
+<code>int pos = 0;</code>
+<code>int buttonPinL = 3;</code>
+<code>int buttonPinR = 2;</code>
+<code>void setup() {</code>
+<code>	myServo.attach(servoPin);</code>
+<code>	pinMode(buttonPinL, INPUT);</code>
+<code>	pinMode(buttonPinR, INPUT);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>		if (digitalRead(buttonPinL) == HIGH && digitalRead(buttonPinR) == LOW){</code>
+<code>			pos++;</code>
+<code>		  	if (pos > 160) {</code>
+<code>		    	pos = 160;</code>
+<code>		  	}</code>
+<code>		 	delay(15); </code>
+<code>		}</code>
+<code>		if (digitalRead(buttonPinR) == HIGH && digitalRead(buttonPinL) == LOW){</code>
+<code>			pos--;</code>
+<code>			if (pos < 0) {</code>
+<code>				pos = 0;</code>
+<code>			}</code>
+<code>			delay(15);</code>
+<code>		}</code>
+<code>		if (pos >= 0 && pos <= 160) {</code>
+<code>			myServo.write(pos);</code>
+<code>		}</code>
+<code>}</code>
+</pre>
+				<i class="fas fa-film" data-gif="gifs/exercise-12b-controlling-the-servo-with-buttons.gif"></i>
 			</article>
 			<article>
 				<h3>SOUND</h3>

@@ -1,5 +1,5 @@
 * {
-  font-family: sans-serif; }
+  font-family: Helvetica, sans-serif; }
 
 h1 {
   font-size: 32px; }
@@ -21,7 +21,9 @@ strong {
   strong.lab-weeks {
     color: #721817; }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box; }
 
 body {
@@ -38,6 +40,8 @@ body {
     background: #b4f7e2; }
   body.workshop h1, body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
+  body.workshop #assignments article:not(:last-child) {
+    border-bottom: 5px dotted #006468; }
   body.excursion section:nth-child(even) {
     background: #fdd1a5; }
   body.excursion h1, body.excursion h2, body.excursion h3 {
@@ -67,7 +71,7 @@ main {
   width: 100%;
   padding-top: 3em; }
   main article {
-    padding: 2em 1em;
+    padding: 1em;
     position: relative; }
 
 .gif {
@@ -81,7 +85,7 @@ main {
   max-width: 128px;
   position: absolute;
   right: 0;
-  padding: 32px;
+  padding: 3em 2em;
   cursor: pointer; }
   .breadboard:active {
     background: none; }
@@ -89,7 +93,6 @@ main {
 pre {
   background: #000000;
   color: #FFFFFF;
-  padding: 1em 0;
   border-radius: 3px;
   counter-reset: line;
   overflow-x: auto;
@@ -98,21 +101,48 @@ pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word; }
+  pre:before {
+    content: "Arduino IDE";
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    padding: 0.5em 2.5em 0.5em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #006468; }
+  pre code {
+    counter-increment: line; }
+    pre code:first-child {
+      line-height: 2em; }
+    pre code:before {
+      content: counter(line);
+      user-select: none;
+      color: grey;
+      padding-right: 10px;
+      margin-right: 10px;
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+      font-style: italic;
+      border-right: 3px solid #006468;
+      text-align: right; }
+  pre.processing:before {
+    content: "Processing";
+    background: #14283C; }
+  pre.processing code:before {
+    border-right: 3px solid #14283C; }
 
-code {
-  counter-increment: line; }
-  code:before {
-    content: counter(line);
-    user-select: none;
-    color: grey;
-    padding-right: 10px;
-    margin-right: 10px;
-    display: inline-block;
-    width: 2em;
-    height: 2em;
-    font-style: italic;
-    border-right: 1px solid grey;
-    text-align: right; }
+.fa-film {
+  font-size: 64px;
+  cursor: pointer; }
+
+blockquote span.light {
+  font-weight: bold;
+  color: #FFFFFF;
+  text-shadow: 0 0 8px #ff0; }
+blockquote span.dark {
+  font-weight: bold;
+  text-shadow: 0 0 2px #000000; }
 
 @media screen and (min-width: 1024px) {
   main article {
