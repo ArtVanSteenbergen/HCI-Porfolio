@@ -173,11 +173,11 @@
 			</article>
 		</section>
 		<section id="assignments">
-			<article>
+			<article id="arduino-introduction">
 				<h2>Assignments</h2>
 				<p>Here is a summary of the assignments I did during the workshops.</p>
 			</article>
-			<article>
+			<article id="blink">
 				<h3>BLINK MULTIPLE LEDS</h3>
 				<p>The first excercise was to make a led on the arduio board blink. After that it was time to hook up the breadboard to the Arduino and let the LED from our starterpack burn on it's own. The perticular excercise I want to showcase here is the one where we needed to make 2 LEDs blink at the same time but on twice as fast as the other. You can see the code used and the circuit layout below. To see the result you must click on the film icon.</p>
 				<img class="breadboard" src="img/3c.png" alt="Circuit layout of Blink Multiple LEDS assignment" />
@@ -203,7 +203,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-3c-blink-multiple-leds.gif"></i>
 			</article>
-			<article>
+			<article id="fade-led">
 				<h3>FADE LED - ANALOG OUTPUT</h3>
 				<p>A lot more is possible then to just put a LED on and off. With the analog write function you can make the LEDs fade in and out. In this example the objective was to make the green LED fade in while the yellow LED fades out.</p>
 				<img class="breadboard" src="img/3c.png" alt="Circuit layout of Fade LED Analog Output assignment" />
@@ -224,7 +224,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-4c-fade-leds-analog-output.gif"></i>
 			</article>
-			<article>
+			<article id="potmeter-led">
 				<h3>CONTROLLING A LED WITH A POTMETER</h3>
 				<p>It's also possible to control the LEDs with a potentiometer. By putting a current through the potmeter and connecting it to the Arduino we can read its value. Then it's posible to use this value to control the LED.</p>
 				<img class="breadboard" src="img/6c.png" alt="Circuit layout of Controlling a LED with a potmeter assignment" />
@@ -247,7 +247,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-6c-controling-a-led-with-a-potmeter.gif"></i>
 			</article>
-			<article>
+			<article id="light-led">
 				<h3>CONTROL THE LED WITH LIGHT</h3>
 				<p>A Light-Dependent Resistor or LDR is, as the name suggestes, a resistor that has it's resistance depending on the amount of light it;s resieving. So in complete darkness the LDR's resistance is about 5,000,000<i>ohm</i> or 5<i>megohm</i> and with a very bright light shining on it it's about 200<i>ohm</i>. By mapping the output of this sensor we can control the LED.</p>
 				<img class="breadboard" src="img/7.png" alt="Circuit layout of Control the LED with light assignment" />
@@ -273,7 +273,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-7-control-the-led-with-light.gif" ></i>
 			</article>
-			<article>
+			<article id="voltage-devider">
 				<h3>VOLTAGE DIVIDER</h3>
 				<p>This excercise used the same code as the previous one. The only difference to the breadboard is that a resistor was replaced with another LDR. In this assignment we needed to explain what happens when the resisor is replaced.</p>
 				<img class="breadboard" src="img/8.png" alt="Circuit layout of Voltage devider assignment" />
@@ -332,7 +332,7 @@
 					<strong>5v * 5<i>megohm</i> : (5<i>megohm</i> + 5<i>megohm</i>) = 2.5v</strong>
 				</blockquote>
 			</article>
-			<article>
+			<article id="arduino-processing">
 				<h3>ARDUINO AND PROCESSING</h3>
 				<p>Another intresting assignment we had to do was this one. By connecting the Arduino to my computer I was able to write a small program that used the potmeter to control a shape on my screen. I used a program called processing and used is to make a rectangle jump around and change color from blue to red and back by turning the potmeter physically.</p>
 				<img class="breadboard" src="img/9.png" alt="Circuit layout of Arduino and Processing assignment" />
@@ -371,7 +371,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-9-arduino-and-processing.gif"></i>
 			</article>
-			<article>
+			<article id="arduino-buttons">
 				<h3>BUTTONS</h3>
 				<img class="breadboard" src="img/10f.png" alt="Circuit layout of buttons assignment" />
 <pre>
@@ -397,7 +397,7 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/excercise-10f-buttons.gif"></i>
 			</article>
-			<article>
+			<article id="servomotor">
 				<h3>SERVOMOTOR</h3>
 				<img class="breadboard" src="img/11b.png" alt="Circuit layout of servomotor assignment" />
 <pre>
@@ -427,7 +427,7 @@
 </pre>
 				<i class="fa fa-film" data-gif="gifs/exercise-11b-servomotor.gif"></i>
 			</article>
-			<article>
+			<article id="potmeter-servo">
 				<h3>CONTROLLING THE SERVO WITH INPUTS</h3>
 				<img class="breadboard" src="img/12b.png" alt="Circuit layout of controlling the servo with inputs assignment" />
 <pre>
@@ -464,11 +464,26 @@
 </pre>
 				<i class="fas fa-film" data-gif="gifs/exercise-12b-controlling-the-servo-with-buttons.gif"></i>
 			</article>
-			<article>
+			<article id="arduino-sound">
 				<h3>SOUND</h3>
 
 				<i class="fas fa-music"></i>
 			</article>
+
+			<nav id="arduino-navigation">
+				<ul>
+					<li class="arduino-nav-item" data-arduino="#blink">1</li>
+					<li class="arduino-nav-item" data-arduino="#fade-led">2</li>
+					<li class="arduino-nav-item" data-arduino="#potmeter-led">3</li>
+					<li class="arduino-nav-item" data-arduino="#light-led">4</li>
+					<li class="arduino-nav-item" data-arduino="#voltage-devider">5</li>
+					<li class="arduino-nav-item" data-arduino="#arduino-processing">6</li>
+					<li class="arduino-nav-item" data-arduino="#arduino-buttons">7</li>
+					<li class="arduino-nav-item" data-arduino="#servomotor">8</li>
+					<li class="arduino-nav-item" data-arduino="#potmeter-servo">9</li>
+					<li class="arduino-nav-item" data-arduino="#arduino-sound">10</li>
+				</ul>
+			</nav>
 		</section>
 	</main>
 	<footer>

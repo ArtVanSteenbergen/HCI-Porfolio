@@ -67,7 +67,6 @@ header {
   z-index: 999; }
 
 main {
-  background: white;
   width: 100%;
   padding-top: 3em; }
   main article {
@@ -91,7 +90,7 @@ main {
     background: none; }
 
 pre {
-  background: #000000;
+  background: #1a1a1a;
   color: #FFFFFF;
   max-width: 90vw;
   border-radius: 3px;
@@ -206,15 +205,15 @@ nav ul {
         nav ul li.topic li:hover a {
           background: #042c53; }
     nav ul li.home-link {
-      background: #0B986B; }
+      background: #1a1a1a; }
       nav ul li.home-link:hover {
-        background: #09805a; }
+        background: #0d0d0d; }
       nav ul li.home-link li:not(:last-child) {
-        border-bottom: 1px solid #09805a; }
+        border-bottom: 1px solid #0d0d0d; }
       nav ul li.home-link li {
-        background-color: #0B986B; }
+        background-color: #1a1a1a; }
         nav ul li.home-link li:hover a {
-          background: #09805a; }
+          background: #0d0d0d; }
     nav ul li.workshop {
       background: #0B6E4F; }
       nav ul li.workshop:hover {
@@ -257,6 +256,21 @@ nav ul {
   display: none;
   position: fixed;
   width: 100%; }
+
+#arduino-navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  background: #3C3B35; }
+  #arduino-navigation .arduino-nav-item {
+    color: #FFFFFF;
+    padding: 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 0.5em; }
 
 @media screen and (min-width: 640px) {
   #mobile-nav .nav-label {

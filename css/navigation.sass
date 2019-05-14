@@ -105,6 +105,21 @@ nav
 	position: fixed
 	width: 100%
 
+#arduino-navigation
+	position: -webkit-sticky
+	position: sticky
+	bottom: 0
+	z-index: 999
+	display: flex
+	justify-content: space-around
+	background: $primary-color
+	.arduino-nav-item
+		color: $white-color
+		padding: 0.5em
+		cursor: pointer
+		font-weight: bold
+		margin: 0 0.5em
+
 @media screen and (min-width: 640px)
 	#mobile-nav
 		.nav-label

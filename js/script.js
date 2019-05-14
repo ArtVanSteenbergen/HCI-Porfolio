@@ -37,3 +37,7 @@ $( "code:contains('yellowLedPin')" ).css( "color", "yellow" );
 $( "code:contains('redLedPin')" ).css( "color", "red" );
 
 TweenMax.from('code', 5, {color: '#fff', ease: Power4.easeOut});
+
+$(".arduino-nav-item").click(function() {
+    $('html, body').animate({scrollTop: $($(this).data('arduino')).offset().top - 64}, 2000);
+});
