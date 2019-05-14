@@ -24,7 +24,7 @@ body
 		h1, h2, h3
 			color: $workshop-color
 		#assignments
-			article:not(:last-child)
+			article:not(:last-child):not(#arduino-sound)
 				border-bottom: 5px dotted $arduino-color
 	&.excursion
 		section:nth-child(even)

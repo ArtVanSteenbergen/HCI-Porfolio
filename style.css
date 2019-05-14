@@ -40,7 +40,7 @@ body {
     background: #b4f7e2; }
   body.workshop h1, body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
-  body.workshop #assignments article:not(:last-child) {
+  body.workshop #assignments article:not(:last-child):not(#arduino-sound) {
     border-bottom: 5px dotted #006468; }
   body.excursion section:nth-child(even) {
     background: #fdd1a5; }
