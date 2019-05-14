@@ -135,6 +135,10 @@ pre {
   cursor: pointer;
   color: #006468; }
 
+iframe {
+  background: #000000;
+  border: 0; }
+
 blockquote span.light {
   font-weight: bold;
   color: #FFFFFF;

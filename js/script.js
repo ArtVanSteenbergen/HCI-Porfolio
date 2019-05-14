@@ -4,6 +4,7 @@ function staggerSubNav(navItem) {
 	var subNavTween = new TweenMax.staggerFromTo(navItem, 0.5, {x: '32px', autoAlpha: 0, ease: Power4.easeOut},{x: '0px', autoAlpha: 1}, 0.1);
 }
 
+
 $(document).on('click', function(event) {
 	if (event.target.className == 'breadboard') {
 		if (!imgClicked) {
@@ -21,23 +22,33 @@ $(document).on('click', function(event) {
 	}
 });
 
-
+// Animate dropdown
 $('nav > ul > li').on('mouseenter', function() {
 	staggerSubNav($(this).find('li'));
 });
 
+// On click film button get gif of assignment
 $('.fa-film').on('click', function(){
+	$('html, body').animate({scrollTop: $(this).offset().top - 64}, 500);
 	$('<img class="gif" src="' + $(this).data('gif') + '" />').insertAfter($(this));
 	TweenMax.fromTo($(this).next(), 0.5, {maxWidth: '64px', autoAlpha: 0, ease: Power4.easeOut},{maxWidth: '100%', autoAlpha: 1});
 	TweenMax.to($(this), 0.5, {autoAlpha: 0, fontSize: '0px', display: 'block',lineHeight: 0, ease: Power4.easeOut, onComplete: () => $(this).remove()});
 });
 
+// On click sound button get youtube video
+$('.fa-music').on('click', function(){
+	$('<iframe width="100%" height="300px" src="https://www.youtube.com/embed/P1vNuPntdbQ?autoplay=1&modestbranding=1&loop=1&controls=1"></iframe>').insertAfter($(this));
+	TweenMax.fromTo($(this).next(), 0.5, {maxWidth: '64px', autoAlpha: 0, ease: Power4.easeOut},{maxWidth: '100%', autoAlpha: 1});
+	TweenMax.to($(this), 0.5, {autoAlpha: 0, fontSize: '0px', display: 'block',lineHeight: 0, ease: Power4.easeOut, onComplete: () => $(this).remove()});
+});
+
+// Color LEDs in code
 $( "code:contains('greenLedPin')" ).css( "color", "green" );
 $( "code:contains('yellowLedPin')" ).css( "color", "yellow" );
 $( "code:contains('redLedPin')" ).css( "color", "red" );
-
 TweenMax.from('code', 5, {color: '#fff', ease: Power4.easeOut});
 
+// Scroll to Arduino assignment when navigation item is clicked
 $(".arduino-nav-item").click(function() {
     $('html, body').animate({scrollTop: $($(this).data('arduino')).offset().top - 64}, 2000);
 });
