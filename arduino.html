@@ -445,9 +445,9 @@
 <code>void loop() {</code>
 <code>		if (digitalRead(buttonPinL) == HIGH && digitalRead(buttonPinR) == LOW){</code>
 <code>			pos++;</code>
-<code>		  	if (pos > 160) {</code>
-<code>		    	pos = 160;</code>
-<code>		  	}</code>
+<code>			if (pos > 160) {</code>
+<code>				pos = 160;</code>
+<code>			}</code>
 <code>		 	delay(15); </code>
 <code>		}</code>
 <code>		if (digitalRead(buttonPinR) == HIGH && digitalRead(buttonPinL) == LOW){</code>
@@ -466,6 +466,38 @@
 			</article>
 			<article id="arduino-sound">
 				<h3>SOUND</h3>
+				<p>Now it was time for some jams. With the buzzer connected to the arduino I was able to create some tunes. The tone function was used to set the speakerpin, the amount of Hz and the duration. Unfortunatly I lost the origenal code I used when I was recording the video but it was something like the one below.</p>
+				<img class="breadboard" src="img/13b.png" alt="Circuit layout of the sound assignment" />
+<pre>
+<code>int speakerPin = 8;</code>
+<code>void setup() {</code>
+<code>  pinMode(speakerPin, OUTPUT);</code>
+<code>}</code>
+<code>void loop() {</code>
+<code>	for (int i = 0; i < 8; i ++) {</code>
+<code>		tone(speakerPin, 1046, 100);</code>
+<code>		delay(1000); </code>
+<code>	}</code>
+<code>	for (int i = 0; i < 12; i ++) {</code>
+<code>	 tone(speakerPin, 1046, 100);</code>
+<code>	 delay(500); </code>
+<code>	}</code>
+<code>	for (int i = 0; i < 12; i ++) {</code>
+<code>	 tone(speakerPin, 1046, 100);</code>
+<code>	 delay(250); </code>
+<code>	}</code>
+<code>	for (int i = 0; i < 12; i ++) {</code>
+<code>	 tone(speakerPin, 1046, 100);</code>
+<code>	 delay(125); </code>
+<code>	}</code>
+<code>	for (int i = 1046; i > 200; i--){</code>
+<code>		tone(speakerPin, i);</code>
+<code>		delay(10);</code>
+<code>	}</code>
+<code>	tone(speakerPin, 3000);</code>
+<code>	delay(8000);</code>
+<code>}</code>
+</pre>
 				<p><strong>WARNING! Headphone users must lower there volume!</strong></p>
 				<i class="fas fa-music"></i>
 			</article>
