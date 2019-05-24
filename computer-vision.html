@@ -174,6 +174,187 @@
 		<section id="assignments">
 			<article>
 				<h2>Assignments</h2>
+				<pre class="processing">
+<code>Ellipse c1 = new Ellipse(100, 30, 40, 30, color(255,0,255), true); </code>
+<code>Ellipse c2 = new Ellipse(50, 150, 20, 120, color(0,255,255), false);</code>
+<code>Ellipse c3 = new Ellipse(75, 80, 240, 40, color(255,0,0), true);</code>
+<code>void setup() {</code>
+<code>	size(300,200);</code>
+<code>	background(0); </code>
+<code>}</code>
+<code>void draw() {</code>
+<code>	c1.update();</code>
+<code>	c2.update();</code>
+<code>	c3.update();</code>
+<code>}</code>
+<code>class Ellipse {</code>
+<code>	int tempX, tempY, tempW, tempH;</code>
+<code>	color tempF;</code>
+<code>	boolean tempS;</code>
+<code>	Ellipse(int x, int y, int w, int h, color f, boolean s) {</code>
+<code>		tempX = x;</code>
+<code>		tempY = y;</code>
+<code>		tempW = w;</code>
+<code>		tempH = h;</code>
+<code>		tempF = f;</code>
+<code>		tempS = s;</code>
+<code>	}</code>
+<code>	void update() {</code>
+<code>	    fill(tempF);</code>
+<code>	    if (tempS == true) {</code>
+<code>	    	stroke(255);</code>
+<code>	    } else {</code>
+<code>	    	noStroke();</code>
+<code>	    }</code>
+<code>	    ellipse(tempX, tempY, tempW, tempH);</code>
+<code>	}</code>
+<code>}</code>
+</pre>
+			<img src="img/ellipses.jpg" />
+			</article>
+			<article>
+<pre class="processing">
+<code>Shape s1 = new Shape(50, 50, 300, 100, color(255,0,255), true, 1);</code>
+<code>Shape s2 = new Shape(100, 100, 50, 150, color(0,255,255), false, 2);</code>
+<code>Shape s3 = new Shape(150, 150, 150, 150, color(255,0,0), true, 3);</code>
+<code>Shape s4 = new Shape(50, 250, 100, 50, color(255,255,0), true, 4);</code>
+<code>void setup() {</code>
+<code> size(400,400);</code>
+<code> background(0);</code>
+<code>}</code>
+<code>void draw() {</code>
+<code>	s1.update();</code>
+<code>	s2.update();</code>
+<code>	s3.update();</code>
+<code>	s4.update();</code>
+<code>}</code>
+<code>class Shape {</code>
+<code>	int tempX, tempY, tempW, tempH, tempShape;</code>
+<code>	color tempF;</code>
+<code>	boolean tempS;</code>
+<code>	Shape(int x, int y, int w, int h, color f, boolean s, int shape) {</code>
+<code>		tempX = x;</code>
+<code>		tempY = y;</code>
+<code>		tempW = w;</code>
+<code>		tempH = h;</code>
+<code>		tempF = f;</code>
+<code>		tempS = s;</code>
+<code>		tempShape = shape;</code>
+<code>	}</code>
+<code>	void update() {</code>
+<code>		fill(tempF);</code>
+<code>		if (tempS == true) {</code>
+<code>			stroke(0, 0, 255);</code>
+<code>		} else {</code>
+<code>			noStroke();</code>
+<code>		}</code>
+<code>		switch(tempShape) {</code>
+<code>			case 1:</code>
+<code>				line(tempX,tempY,tempW,tempH);</code>
+<code>				return;</code>
+<code>			case 2:</code>
+<code>				triangle(tempX,tempY,tempW,tempH,tempX * 2, tempY);</code>
+<code>				return;</code>
+<code>			case 3:</code>
+<code>				quad(tempX,tempY,tempX * 2,tempY, (tempX * 2) * 1.1, tempY * 2, tempX * 1.2,tempY * 2);</code>
+<code>				return;</code>
+<code>			case 4:</code>
+<code>				rect(tempX,tempY,tempW,tempH);</code>
+<code>				return;</code>
+<code>			default:</code>
+<code>				ellipse(tempX, tempY, tempW, tempH);</code>
+<code>		}</code>
+<code>	}</code>
+<code>}</code>
+</pre>
+			<img src="img/shapes.jpg" />
+			</article>
+			<article>
+<pre class="processing">
+<code>void setup() {</code>
+<code> size(800,800);</code>
+<code> background(255);</code>
+<code> ellipseMode(CENTER);</code>
+<code>}</code>
+<code>void draw() {</code>
+<code>  background(255);</code>
+<code>  stroke(0);</code>
+<code>  strokeWeight(map(mouseY, 0, 800, 100, 0));</code>
+<code>  line(width/2,0, mouseX, mouseY);</code>
+<code>  noStroke();</code>
+<code>  fill(map(sin((mouseY+mouseX) * 0.01), 0, 1, 0, 255),map(mouseX, 0, 800, 0, 255),map(mouseY, 0, 800, 0, 255));</code>
+<code>  ellipse(mouseX, mouseY, 100, 100);</code>
+<code>}</code>
+</pre>
+			</article>
+			<article>
+<pre class="processing">
+<code>import gab.opencv.*;</code>
+<code>import processing.video.*;</code>
+<code>import java.awt.*;</code>
+<code>Capture video;</code>
+<code>OpenCV opencv;</code>
+<code>void setup() {</code>
+<code>  size(1280, 720);</code>
+<code>  video = new Capture(this, 1280/2, 720/2);</code>
+<code>  opencv = new OpenCV(this, 1280/2, 720/2);</code>
+<code>  opencv.loadCascade(OpenCV.CASCADE_FRONTALFACE);  </code>
+<code>  ellipseMode(CORNER);</code>
+<code>  video.start();</code>
+<code>}</code>
+<code>void draw() {</code>
+<code>  scale(2);</code>
+<code>  opencv.loadImage(video);</code>
+<code>  image(video, 0, 0 );</code>
+<code>  noFill();</code>
+<code>  stroke(0, 255, 0);</code>
+<code>  strokeWeight(3);</code>
+<code>  Rectangle[] faces = opencv.detect();</code>
+<code>  println(faces.length);</code>
+<code>  for (int i = 0; i < faces.length; i++) {</code>
+<code>    println(faces[i].x + "," + faces[i].y);</code>
+<code>    ellipse(faces[i].x, faces[i].y, faces[i].width, faces[i].height);</code>
+<code>  }</code>
+<code>}</code>
+<code>void captureEvent(Capture c) {</code>
+<code>  c.read();</code>
+<code>}</code>
+</pre>
+				<img src="img/live-cam-test.jpg">
+			</article>
+			<article>
+<pre>
+<code>import gab.opencv.*;</code>
+<code>import processing.video.*;</code>
+<code>import java.awt.*;</code>
+<code>Capture video;</code>
+<code>OpenCV opencv;</code>
+<code>void setup() {</code>
+<code>  size(1280, 720);</code>
+<code>  video = new Capture(this, 1280/2, 720/2);</code>
+<code>  opencv = new OpenCV(this, 1280/2, 720/2);</code>
+<code>  opencv.loadCascade(OpenCV.CASCADE_NOSE);  </code>
+<code>  ellipseMode(CORNER);</code>
+<code>  video.start();</code>
+<code>}</code>
+<code>void draw() {</code>
+<code>  scale(2);</code>
+<code>  opencv.loadImage(video);</code>
+<code>  image(video, 0, 0 );</code>
+<code>  fill(255,0,0);</code>
+<code>  noStroke();</code>
+<code>  strokeWeight(3);</code>
+<code>  Rectangle[] faces = opencv.detect();</code>
+<code>  println(faces.length);</code>
+<code>  for (int i = 0; i < faces.length; i++) {</code>
+<code>    println(faces[i].x + "," + faces[i].y);</code>
+<code>    ellipse(faces[i].x, faces[i].y - 10, faces[i].width, faces[i].width);</code>
+<code>  }</code>
+<code>}</code>
+<code>void captureEvent(Capture c) {</code>
+<code>  c.read();</code>
+<code>}</code>
+</pre>
 			</article>
 		</section>
 	</main>
