@@ -129,6 +129,9 @@ pre {
   pre.processing code:before {
     border-right: 3px solid #14283C; }
 
+figure img {
+  width: 100%; }
+
 .fa-film,
 .fa-music {
   font-size: 64px;
