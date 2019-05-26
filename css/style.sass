@@ -2,8 +2,8 @@
 @import 'typography'
 
 *,
-*:before,
-*:after
+*::before,
+*::after
 	box-sizing: border-box
 
 body
@@ -37,7 +37,7 @@ body
 		h1, h2, h3
 			color: $lab-weeks-color
 
-	.expectations
+	.expectations, .important
 		padding: 0
 		h3
 			background: $secondary-color
@@ -49,6 +49,12 @@ body
 			background: lighten($secondary-color, 60%)
 			padding: 1em
 			margin: 0
+	.important
+		padding-top: 1em
+		h3
+			background: #dd0000
+		p
+			background: lighten(#dd0000, 20%)
 header
 	z-index: 999
 main
@@ -82,7 +88,7 @@ pre
 	border-radius: 3px
 	counter-reset: line
 	overflow-x: auto
-	&:before
+	&::before
 		content: 'Arduino IDE'
 		font-weight: bold
 		width: 100%
@@ -97,7 +103,7 @@ pre
 		padding-right: 1em
 		&:first-child
 			line-height: 2em
-		&:before
+		&::before
 			content: counter(line)
 			user-select: none
 			color: grey
@@ -110,12 +116,15 @@ pre
 			border-right: 3px solid $arduino-color
 			text-align: right
 	&.processing
-		&:before
+		&::before
 			content: 'Processing'
 			background: $processing-color
 		code
-			&:before
+			&::before
 				border-right: 3px solid $processing-color
+
+img
+	max-width: 100%
 
 figure
 	img
@@ -144,6 +153,49 @@ blockquote span
 	&.dark
 		font-weight: bold
 		text-shadow: 0 0 2px $black-color
+
+.artificial-creatures
+	display: grid
+	grid-template-areas: "ac-title ac-title""ac-intro ac-intro""ac-img ac-homeostasis"
+	grid-template-columns: 1fr 1fr
+
+	#ac-title
+		grid-area: ac-title
+
+	#ac-intro
+		grid-area: ac-intro
+
+	#ac-img
+		grid-area: ac-img
+
+	#ac-homeostasis
+		padding: 1em
+		grid-area: ac-homeostasis
+
+		p
+			position: relative
+			span
+				position: absolute
+				padding: 0.5em
+				font-weight: bold
+			progress[value]
+				-webkit-appearance: none
+				appearance: none
+				position: relative
+				height: 2em
+				&::-webkit-progress-bar
+					background-color: none
+					border-radius: 2px
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset
+				&::-webkit-progress-value
+					background-image: -webkit-linear-gradient(45deg, transparent 20%, rgba(0, 0, 0, .1) 33.33%, rgba(0,0, 0, .1) 66.66%, transparent 40%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, $topic-color, $processing-color)
+				&::after
+					content: attr(value)
+					color: $white-color
+					position: absolute
+					top: 0
+					padding: 0.5em
+					font-weight: bold
 
 @media screen and (min-width: 1056px)
 	main

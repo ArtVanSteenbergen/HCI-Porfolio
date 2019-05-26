@@ -22,8 +22,8 @@ strong {
     color: #721817; }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box; }
 
 body {
@@ -50,18 +50,24 @@ body {
     background: #f4c8c7; }
   body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
     color: #721817; }
-  body .expectations {
+  body .expectations, body .important {
     padding: 0; }
-    body .expectations h3 {
+    body .expectations h3, body .important h3 {
       background: #05396B;
       color: #FFFFFF;
       margin: 0;
       color: #fff;
       padding: 0.5em 1em; }
-    body .expectations p {
+    body .expectations p, body .important p {
       background: #a7d2fb;
       padding: 1em;
       margin: 0; }
+  body .important {
+    padding-top: 1em; }
+    body .important h3 {
+      background: #dd0000; }
+    body .important p {
+      background: #ff4444; }
 
 header {
   z-index: 999; }
@@ -96,7 +102,7 @@ pre {
   border-radius: 3px;
   counter-reset: line;
   overflow-x: auto; }
-  pre:before {
+  pre::before {
     content: "Arduino IDE";
     font-weight: bold;
     width: 100%;
@@ -111,7 +117,7 @@ pre {
     padding-right: 1em; }
     pre code:first-child {
       line-height: 2em; }
-    pre code:before {
+    pre code::before {
       content: counter(line);
       user-select: none;
       color: grey;
@@ -123,11 +129,14 @@ pre {
       font-style: italic;
       border-right: 3px solid #006468;
       text-align: right; }
-  pre.processing:before {
+  pre.processing::before {
     content: "Processing";
     background: #14283C; }
-  pre.processing code:before {
+  pre.processing code::before {
     border-right: 3px solid #14283C; }
+
+img {
+  max-width: 100%; }
 
 figure img {
   width: 100%; }
@@ -152,6 +161,44 @@ blockquote span.light {
 blockquote span.dark {
   font-weight: bold;
   text-shadow: 0 0 2px #000000; }
+
+.artificial-creatures {
+  display: grid;
+  grid-template-areas: "ac-title ac-title" "ac-intro ac-intro" "ac-img ac-homeostasis";
+  grid-template-columns: 1fr 1fr; }
+  .artificial-creatures #ac-title {
+    grid-area: ac-title; }
+  .artificial-creatures #ac-intro {
+    grid-area: ac-intro; }
+  .artificial-creatures #ac-img {
+    grid-area: ac-img; }
+  .artificial-creatures #ac-homeostasis {
+    padding: 1em;
+    grid-area: ac-homeostasis; }
+    .artificial-creatures #ac-homeostasis p {
+      position: relative; }
+      .artificial-creatures #ac-homeostasis p span {
+        position: absolute;
+        padding: 0.5em;
+        font-weight: bold; }
+      .artificial-creatures #ac-homeostasis p progress[value] {
+        -webkit-appearance: none;
+        appearance: none;
+        position: relative;
+        height: 2em; }
+        .artificial-creatures #ac-homeostasis p progress[value]::-webkit-progress-bar {
+          background-color: none;
+          border-radius: 2px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset; }
+        .artificial-creatures #ac-homeostasis p progress[value]::-webkit-progress-value {
+          background-image: -webkit-linear-gradient(45deg, transparent 20%, rgba(0, 0, 0, 0.1) 33.33%, rgba(0, 0, 0, 0.1) 66.66%, transparent 40%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, #05396B, #14283C); }
+        .artificial-creatures #ac-homeostasis p progress[value]::after {
+          content: attr(value);
+          color: #FFFFFF;
+          position: absolute;
+          top: 0;
+          padding: 0.5em;
+          font-weight: bold; }
 
 @media screen and (min-width: 1056px) {
   main article {
