@@ -50,5 +50,5 @@ TweenMax.from('code', 5, {color: '#fff', ease: Power4.easeOut});
 
 // Scroll to Arduino assignment when navigation item is clicked
 $(".arduino-nav-item").click(function() {
-    $('html, body').animate({scrollTop: $($(this).data('arduino')).offset().top - 64}, 2000);
+    $('html, body').stop().animate({scrollTop: $($(this).data('arduino')).offset().top - 64}, 2000);
 });
