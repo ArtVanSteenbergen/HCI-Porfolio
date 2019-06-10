@@ -43,7 +43,7 @@ body {
   body.topic section:nth-child(even) {
     background: #a7d2fb; }
   body.topic section:first-child {
-    background: linear-gradient(rgba(5, 57, 107, 0.5), #05396B), url("img/topics.jpg") bottom center fixed;
+    background: linear-gradient(rgba(5, 57, 107, 0.5), #05396B), url("img/topics.jpg") fixed;
     background-size: cover, cover; }
     body.topic section:first-child p, body.topic section:first-child h1 {
       color: #FFFFFF; }
@@ -51,18 +51,28 @@ body {
     color: #05396B; }
   body.workshop section:nth-child(even) {
     background: #b4f7e2; }
-  body.workshop h1, body.workshop h2, body.workshop h3 {
+  body.workshop section:first-child {
+    background: linear-gradient(rgba(11, 110, 79, 0.5), #0B6E4F), url("img/workshop.jpg") fixed;
+    background-size: cover, cover; }
+    body.workshop section:first-child p, body.workshop section:first-child h1 {
+      color: #FFFFFF; }
+  body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
   body.workshop #assignments article:not(:last-child):not(#arduino-sound) {
     border-bottom: 5px dotted #006468; }
   body.excursion section:nth-child(even) {
-    background: #fdd1a5; }
-  body.excursion h1, body.excursion h2, body.excursion h3 {
+    background: white; }
+  body.excursion section:first-child {
+    background: linear-gradient(rgba(250, 159, 66, 0.5), #FA9F42), url("img/nemo.jpg") fixed;
+    background-size: cover, cover; }
+    body.excursion section:first-child p, body.excursion section:first-child h1 {
+      color: #FFFFFF; }
+  body.excursion h2, body.excursion h3 {
     color: #FA9F42; }
   body.lab-weeks section:nth-child(even) {
     background: #f4c8c7; }
   body.lab-weeks section:first-child {
-    background: linear-gradient(rgba(114, 24, 23, 0.5), #721817), url("img/lab-weeks.jpg") bottom center fixed;
+    background: linear-gradient(rgba(114, 24, 23, 0.5), #721817), url("img/lab-weeks.jpg") fixed;
     background-size: cover, cover; }
     body.lab-weeks section:first-child p, body.lab-weeks section:first-child h1 {
       color: #FFFFFF; }

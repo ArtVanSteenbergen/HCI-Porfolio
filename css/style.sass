@@ -17,7 +17,7 @@ body
 		section:nth-child(even)
 			background: lighten($topic-color, 60%)
 		section:first-child
-			background: linear-gradient( rgba($topic-color, 0.5), $topic-color), url('img/topics.jpg') bottom center fixed
+			background: linear-gradient( rgba($topic-color, 0.5), $topic-color), url('img/topics.jpg') fixed
 			background-size: cover, cover
 			p,h1
 				color: $white-color
@@ -26,21 +26,32 @@ body
 	&.workshop
 		section:nth-child(even)
 			background: lighten($workshop-color, 60%)
-		h1, h2, h3
+		section:first-child
+			background: linear-gradient( rgba($workshop-color, 0.5), $workshop-color), url('img/workshop.jpg') fixed
+			background-size: cover, cover
+			p,h1
+				color: $white-color
+		h2, h3
 			color: $workshop-color
 		#assignments
 			article:not(:last-child):not(#arduino-sound)
 				border-bottom: 5px dotted $arduino-color
 	&.excursion
 		section:nth-child(even)
-			background: lighten($excursion-color, 20%)
-		h1, h2, h3
+			background: lighten($excursion-color, 60%)
+		section:first-child
+			background: linear-gradient( rgba($excursion-color, 0.5), $excursion-color), url('img/nemo.jpg') fixed
+			background-size: cover, cover
+			p,h1
+				color: $white-color
+		h2, h3
 			color: $excursion-color
+
 	&.lab-weeks
 		section:nth-child(even)
 			background: lighten($lab-weeks-color, 60%)
 		section:first-child
-			background: linear-gradient( rgba($lab-weeks-color, 0.5), $lab-weeks-color), url('img/lab-weeks.jpg') bottom center fixed
+			background: linear-gradient( rgba($lab-weeks-color, 0.5), $lab-weeks-color), url('img/lab-weeks.jpg') fixed
 			background-size: cover, cover
 			p,h1
 				color: $white-color
