@@ -16,7 +16,12 @@ body
 	&.topic
 		section:nth-child(even)
 			background: lighten($topic-color, 60%)
-		h1, h2, h3
+		section:first-child
+			background: linear-gradient( rgba($topic-color, 0.5), $topic-color), url('img/topics.jpg') bottom center fixed
+			background-size: cover, cover
+			p,h1
+				color: $white-color
+		h2, h3
 			color: $topic-color
 	&.workshop
 		section:nth-child(even)
@@ -34,9 +39,19 @@ body
 	&.lab-weeks
 		section:nth-child(even)
 			background: lighten($lab-weeks-color, 60%)
-		h1, h2, h3
+		section:first-child
+			background: linear-gradient( rgba($lab-weeks-color, 0.5), $lab-weeks-color), url('img/lab-weeks.jpg') bottom center fixed
+			background-size: cover, cover
+			p,h1
+				color: $white-color
+		h2, h3
 			color: $lab-weeks-color
-
+		#process
+			article:not(:last-child)
+				border-bottom: 5px dotted $lab-weeks-color
+			a
+				font-weight: bold
+				color: $lab-weeks-color
 	.expectations, .important
 		padding: 0
 		h3

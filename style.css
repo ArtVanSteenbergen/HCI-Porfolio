@@ -34,7 +34,12 @@ body {
   min-height: 100vh; }
   body.topic section:nth-child(even) {
     background: #a7d2fb; }
-  body.topic h1, body.topic h2, body.topic h3 {
+  body.topic section:first-child {
+    background: linear-gradient(rgba(5, 57, 107, 0.5), #05396B), url("img/topics.jpg") bottom center fixed;
+    background-size: cover, cover; }
+    body.topic section:first-child p, body.topic section:first-child h1 {
+      color: #FFFFFF; }
+  body.topic h2, body.topic h3 {
     color: #05396B; }
   body.workshop section:nth-child(even) {
     background: #b4f7e2; }
@@ -48,7 +53,17 @@ body {
     color: #FA9F42; }
   body.lab-weeks section:nth-child(even) {
     background: #f4c8c7; }
-  body.lab-weeks h1, body.lab-weeks h2, body.lab-weeks h3 {
+  body.lab-weeks section:first-child {
+    background: linear-gradient(rgba(114, 24, 23, 0.5), #721817), url("img/lab-weeks.jpg") bottom center fixed;
+    background-size: cover, cover; }
+    body.lab-weeks section:first-child p, body.lab-weeks section:first-child h1 {
+      color: #FFFFFF; }
+  body.lab-weeks h2, body.lab-weeks h3 {
+    color: #721817; }
+  body.lab-weeks #process article:not(:last-child) {
+    border-bottom: 5px dotted #721817; }
+  body.lab-weeks #process a {
+    font-weight: bold;
     color: #721817; }
   body .expectations, body .important {
     padding: 0; }
