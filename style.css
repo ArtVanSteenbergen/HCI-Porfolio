@@ -153,8 +153,10 @@ pre {
 img {
   max-width: 100%; }
 
-figure img {
-  width: 100%; }
+figure {
+  max-width: 100%; }
+  figure img {
+    width: 100%; }
 
 .fa-film,
 .fa-music {
