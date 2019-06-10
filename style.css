@@ -216,6 +216,8 @@ blockquote span.dark {
           font-weight: bold; }
 
 @media screen and (min-width: 1056px) {
+  main section:first-child {
+    padding-top: 128px; }
   main article {
     margin: 0 auto;
     width: 1024px;
