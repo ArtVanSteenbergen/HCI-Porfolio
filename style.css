@@ -54,7 +54,7 @@ body {
   body.workshop section:first-child {
     background: linear-gradient(rgba(11, 110, 79, 0.5), #0B6E4F), url("img/workshop.jpg") fixed;
     background-size: cover, cover; }
-    body.workshop section:first-child p, body.workshop section:first-child h1 {
+    body.workshop section:first-child p, body.workshop section:first-child h1, body.workshop section:first-child a {
       color: #FFFFFF; }
   body.workshop h2, body.workshop h3 {
     color: #0B6E4F; }
