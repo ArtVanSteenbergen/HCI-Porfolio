@@ -12,6 +12,9 @@ body
 	grid-template-areas: '.''.''.'
 	grid-template-rows: auto 1fr auto
 	min-height: 100vh
+	&.home
+		section
+			padding: 3em 0
 
 	&.topic
 		section:nth-child(even)
@@ -19,7 +22,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($topic-color, 0.5), $topic-color), url('img/topics.jpg') fixed
 			background-size: cover, cover
-			p,h1
+			p,h1,h2,h3
 				color: $white-color
 		h2, h3
 			color: $topic-color
@@ -29,7 +32,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($workshop-color, 0.5), $workshop-color), url('img/workshop.jpg') fixed
 			background-size: cover, cover
-			p,h1,a
+			p,h1,h2,h3
 				color: $white-color
 		h2, h3
 			color: $workshop-color
@@ -42,7 +45,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($excursion-color, 0.5), $excursion-color), url('img/nemo.jpg') fixed
 			background-size: cover, cover
-			p,h1
+			p,h1,h2,h3
 				color: $white-color
 		h2, h3
 			color: $excursion-color
@@ -53,7 +56,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($lab-weeks-color, 0.5), $lab-weeks-color), url('img/lab-weeks.jpg') fixed
 			background-size: cover, cover
-			p,h1
+			p,h1,h2,h3
 				color: $white-color
 		h2, h3
 			color: $lab-weeks-color
@@ -155,8 +158,24 @@ img
 
 figure
 	max-width: 100%
+	position: relative
 	img
 		width: 100%
+	figcaption
+		opacity: 0.3
+		position: absolute
+		color: $white-color
+		bottom: 0.5em
+		right: 0.5em
+		font-weight: bold
+		text-shadow: 2px 1px 1px $black-color, 0 0 2px $black-color
+		transition: opacity 1s ease-out
+	&:hover
+		figcaption
+			opacity: 1
+			transition: opacity 0.25s ease-out
+
+
 
 .fa-film,
 .fa-music
@@ -184,8 +203,8 @@ blockquote span
 
 .artificial-creatures
 	display: grid
-	grid-template-areas: "ac-title ac-title""ac-intro ac-intro""ac-img ac-homeostasis"
-	grid-template-columns: 1fr 1fr
+	grid-template-areas: "ac-title" "ac-intro" "ac-img" "ac-homeostasis"
+	grid-template-columns: 1fr
 
 	#ac-title
 		grid-area: ac-title
@@ -233,9 +252,17 @@ blockquote span
 			margin: 0 auto
 			width: 1024px
 			box-sizing: border-box
+
+	body.home section:first-child
+		padding-top: 3em
 	pre
 		code
 			tab-size: 2em
+
+	.artificial-creatures
+		display: grid
+		grid-template-areas: "ac-title ac-title""ac-intro ac-intro""ac-img ac-homeostasis"
+		grid-template-columns: 1fr 1fr
 
 footer
 	background: $secondary-color
@@ -244,5 +271,8 @@ footer
 	p
 		margin: 0
 
-
 @import 'navigation'
+
+@media print
+	header, #arduino-navigation
+		display: none

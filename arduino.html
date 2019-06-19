@@ -373,25 +373,19 @@
 			</article>
 			<article id="arduino-buttons">
 				<h3>7: BUTTONS</h3>
+				<p>By putting two buttons on my breadboard and connecting them to my Arduino I created two interaction inputs. The task in this assignment was to only make the LED light up when one button is pressed. Using a condition that checked if both input pins have a different voltage, I made the code as short as possible.  I could have made the code more readable by adding variable names but decided to challenge my self to make it as efficient as possible.</p>
 				<img class="breadboard" src="img/10f.png" alt="Circuit layout of buttons assignment" />
 <pre>
-<code>int ledPin = 13;</code>
-<code>int buttonPinL = 3;</code>
-<code>int buttonPinR = 2;</code>
-<code>int readingL;</code>
-<code>int readingR;</code>
 <code>void setup() {</code>
-<code>	pinMode(ledPin, OUTPUT);</code>
-<code>	pinMode(buttonPinL, INPUT);</code>
-<code>	pinMode(buttonPinR, INPUT);</code>
+<code>	pinMode(13, OUTPUT);	//LED pin</code>
+<code>	pinMode(3, INPUT);		//Left button pin</code>
+<code>	pinMode(2, INPUT);		//right button pin</code>
 <code>}</code>
 <code>void loop(){</code>
-<code>	readingL = digitalRead(buttonPinL);</code>
-<code>	readingR = digitalRead(buttonPinR);</code>
-<code>	if ((readingL == HIGH && readingR == LOW) || (readingL == LOW && readingR == HIGH)) {</code>
-<code>		digitalWrite(ledPin, HIGH);  </code>
+<code>	if (digitalRead(2) != digitalRead(3)) {</code>
+<code>		digitalWrite(13, HIGH);  </code>
 <code>	} else {</code>
-<code>		digitalWrite(ledPin, LOW);</code>
+<code>		digitalWrite(13, LOW);</code>
 <code>	}</code>
 <code>}</code>
 </pre>
@@ -399,6 +393,7 @@
 			</article>
 			<article id="servomotor">
 				<h3>8: SERVOMOTOR</h3>
+				<p>In this exercise were we got the task to let the servo dance. I did this by setting differed positions and added a for loop that iterated through positions. When I uploaded the code it did its dance and by doing so I learned how to control a servo with an Arduino.</p>
 				<img class="breadboard" src="img/11b.png" alt="Circuit layout of servomotor assignment" />
 <pre>
 <code>#include &lt;Servo.h&#62;</code>
@@ -429,6 +424,7 @@
 			</article>
 			<article id="potmeter-servo">
 				<h3>9: CONTROLLING THE SERVO WITH INPUTS</h3>
+				<p>Radio controlled cars, boats and planes use servo’s to control steering, pitch, roll and/or yaw. In this exercise I added to buttons to control a servo. By doing so, I could implements this in radio controlled vehicles in the future. The servo I used could only rotate from 0 to 160 degrees so I added an if statement to check is the value was between these positions before executing the movements.</p>
 				<img class="breadboard" src="img/12b.png" alt="Circuit layout of controlling the servo with inputs assignment" />
 <pre>
 <code>#include &lt;Servo.h&#62;</code>

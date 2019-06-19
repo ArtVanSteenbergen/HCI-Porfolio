@@ -4,7 +4,6 @@ function staggerSubNav(navItem) {
 	var subNavTween = new TweenMax.staggerFromTo(navItem, 0.5, {x: '32px', autoAlpha: 0, ease: Power4.easeOut},{x: '0px', autoAlpha: 1}, 0.1);
 }
 
-
 $(document).on('click', function(event) {
 	if (event.target.className == 'breadboard') {
 		if (!imgClicked) {
@@ -52,3 +51,6 @@ TweenMax.from('code', 5, {color: '#fff', ease: Power4.easeOut});
 $(".arduino-nav-item").click(function() {
     $('html, body').stop().animate({scrollTop: $($(this).data('arduino')).offset().top - 64}, 2000);
 });
+
+var mobileAnimation = new TimelineMax({repeat:-1,repeatDelay:30});
+mobileAnimation.staggerFromTo('#mobile-nav i', 4, {rotation: 0},{rotation: 360, ease: Power4.easeInOut},10);
