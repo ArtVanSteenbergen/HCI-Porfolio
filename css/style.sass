@@ -12,6 +12,10 @@ body
 	grid-template-areas: '.''.''.'
 	grid-template-rows: auto 1fr auto
 	min-height: 100vh
+	section:first-child
+		p,a,h1,h2,h3
+			color: $white-color
+
 	&.home
 		section
 			padding: 3em 0
@@ -22,9 +26,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($topic-color, 0.5), $topic-color), url('img/topics.jpg') fixed
 			background-size: cover, cover
-			p,h1,h2,h3
-				color: $white-color
-		h2, h3
+		h2, h3, article:not(:first-child) a
 			color: $topic-color
 	&.workshop
 		section:nth-child(even)
@@ -32,22 +34,18 @@ body
 		section:first-child
 			background: linear-gradient( rgba($workshop-color, 0.5), $workshop-color), url('img/workshop.jpg') fixed
 			background-size: cover, cover
-			p,h1,h2,h3
-				color: $white-color
-		h2, h3
+		h2, h3, article:not(:first-child) a
 			color: $workshop-color
 		#assignments
 			article:not(:last-child):not(#arduino-sound)
-				border-bottom: 5px dotted $arduino-color
+				border-bottom: 5px dotted $workshop-color
 	&.excursion
 		section:nth-child(even)
 			background: lighten($excursion-color, 60%)
 		section:first-child
 			background: linear-gradient( rgba($excursion-color, 0.5), $excursion-color), url('img/nemo.jpg') fixed
 			background-size: cover, cover
-			p,h1,h2,h3
-				color: $white-color
-		h2, h3
+		h2, h3, article:not(:first-child) a
 			color: $excursion-color
 
 	&.lab-weeks
@@ -56,9 +54,7 @@ body
 		section:first-child
 			background: linear-gradient( rgba($lab-weeks-color, 0.5), $lab-weeks-color), url('img/lab-weeks.jpg') fixed
 			background-size: cover, cover
-			p,h1,h2,h3
-				color: $white-color
-		h2, h3
+		h2, h3, article:not(:first-child) a
 			color: $lab-weeks-color
 		#process
 			article:not(:last-child)
@@ -179,9 +175,19 @@ figure
 
 .fa-film,
 .fa-music
+	position: relative
 	font-size: 64px
 	cursor: pointer
-	color: $arduino-color
+	color: $workshop-color
+	&:after
+		content: 'Click to play'
+		font-family: $font-stack
+		font-size: 10px
+		position: absolute
+		bottom: -7px
+		left: 0
+		width: 128px
+
 
 iframe
 	background: $black-color
