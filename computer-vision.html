@@ -169,12 +169,14 @@
 		<section>
 			<article>
 				<h1>Computer Vision</h1>
+				<p>In this workshop we learned to use Processing as a computer vision tool. I first learned te basics of processing and then I put it all together to draw shapes on my face.</p>
 			</article>
 		</section>
 		<section id="assignments" class="computer-vision">
 			<article>
 				<h2>Assignments</h2>
-				<pre class="processing">
+					<p>The first assignment was to draw three different ellipses. I challenged myself to make a Ellipse class. You can see the result below the code.</p>
+<pre class="processing">
 <code>Ellipse c1 = new Ellipse(100, 30, 40, 30, color(255,0,255), true); </code>
 <code>Ellipse c2 = new Ellipse(50, 150, 20, 120, color(0,255,255), false);</code>
 <code>Ellipse c3 = new Ellipse(75, 80, 240, 40, color(255,0,0), true);</code>
@@ -213,6 +215,7 @@
 			<img src="img/ellipses.jpg" alt="draing ellipses using processing" />
 			</article>
 			<article>
+				<p>I changed the code from the previous assignment to create four different shapes.</p>
 <pre class="processing">
 <code>Shape s1 = new Shape(50, 50, 300, 100, color(255,0,255), true, 1);</code>
 <code>Shape s2 = new Shape(100, 100, 50, 150, color(0,255,255), false, 2);</code>
@@ -270,6 +273,7 @@
 			<img src="img/shapes.jpg" alt="Drawing multiple shapes using processing" />
 			</article>
 			<article>
+				<p>After trying a couple of exercises with the mouse I did the assignment where I needed to use the mouse to make two different shapes move and change. I made a bouncy line that stretched when you would pull it down.</p>
 <pre class="processing">
 <code>void setup() {</code>
 <code> size(800,800);</code>
@@ -286,8 +290,14 @@
 <code>  ellipse(mouseX, mouseY, 100, 100);</code>
 <code>}</code>
 </pre>
+				<figure>
+					<video controls muted loop autoplay>
+						<source src="vids/line_dance.mp4" type="video/mp4">
+					</video>
+				</figure>
 			</article>
 			<article>
+				<p>In this assignment I only needed to change a rectangle to a circle using facial recognition the openCV library.</p>
 <pre class="processing">
 <code>import gab.opencv.*;</code>
 <code>import processing.video.*;</code>
@@ -323,6 +333,7 @@
 				<img src="img/live-cam-test.jpg" alt="Drawing a ellipse on my face using openCV" />
 			</article>
 			<article>
+				<p>We had to put something on a part of our face by setting a different cascade. I gave myself a clowns nose.</p>
 <pre class="processing">
 <code>import gab.opencv.*;</code>
 <code>import processing.video.*;</code>
@@ -355,6 +366,11 @@
 <code>  c.read();</code>
 <code>}</code>
 </pre>
+				<figure>
+					<video controls muted loop autoplay>
+						<source src="vids/clowns-nose.mp4" type="video/mp4">
+					</video>
+				</figure>
 			</article>
 		</section>
 	</main>
