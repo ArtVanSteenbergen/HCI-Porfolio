@@ -187,7 +187,7 @@
 				<p>After we had a clear understanding of what a creature is, we started to list a couple concepts and pick all voted on the ones we liked best. Entertainer and Motivator were both voted four times and we decided to make an Entertaining Motivator/Motivational Entertainer for now.</p>
 				<p>We were told to work with a scrum board, so it was clear for the teachers and ourselves what we need to do, what we are doing and to see what we have done. The first post-it we added to this board was jokingly: “make this board”.</p>
 				<figure>
-					<img src="img/scrum-board-day1.jpg" />
+					<img src="img/scrum-board-day1.jpg"  alt="Scrum board at day 1"/>
 					<caption>The scrum board at the end of the first day</caption>
 				</figure>
 				<p>As seen on the board we tried out a Voice Kit from Google. This kit consisted of a Raspberry Pi Zero WH, a Voice Bonnet a speaker, a Micro SD card, a button, a couple if wires and a cardboard frame. After putting this hardware together, we connected to the Raspberry Pi to power and my laptop via Wi-Fi. By following the steps on <a href="https://aiyprojects.withgoogle.com/voice/">this</a> documentation we had a working Google Assistant in no time. However, when we tried to add text-to-speech we ran into a problem. They have a very serious billing program for using this service. So, we decided to put every component back in the box and return it to the teachers.</p>
@@ -200,17 +200,17 @@
 				<h3>DAY 2</h3>
 				<p>The second day of the lab weeks I brought with me a robot platform. This consisted of four motors, four wheels a frame and a H-bridge. The H-bridge coverts 5v power to a higher voltage so it’s more powerful than just connecting it to an Arduino. To not let it bump into stuff, I attached an Ultrasonic sensor. This sensor sends out and receives ultrasonic signals. The sending is called the trigger and the receiving is called the echo. You can manually code the Arduino to calculate the time it takes sound to travel to an object and back, this way you get a distance value. An easier way to get the distance value is using a library that does this calculation for you. By including the “Ultrasonic” library from <a href="https://github.com/ErickSimoes/Ultrasonic">Erick Simões</a>, you only have to set the echo end trigger pins and you can call the ultrasonic.distanceRead() function to get the distance in centimeters.</p>
 				<figure>
-					<img src="img/robot-driving-platform.jpg">
+					<img src="img/robot-driving-platform.jpg" alt=""/>
 					<caption>Robot Driving Platform after the first test drive</caption>
 				</figure>
 				<p>While I was tinkering with the driving platform and optimizing its code, Viktorija and Stefano worked on displaying messages with an LCD unit. They started with this the day before but made major steps today. Karen and Charlotte were busy creating their own capacitive touch sensor using a one megaohm resistor and aluminum foil. At the end of the day they had their breakthrough as well. They could control a LED by touching the piece of aluminum.</p>
 				<figure>
-					<img src="img/vincent.jpg">
+					<img src="img/vincent.jpg" alt=""/>
 					<caption>Picture by Karen Hernandez; Vincent Lindeboom giving his guest lecture</caption>
 				</figure>
 				<p>This day we also had the first guest lecture. CEO and Founder of Next Empire, Vincent Lindeboom told us about his work. He showed a lot of interesting AR and VR installations. The one that impressed me the most was ‘Moord In ARtis’ a.k.a. Murder in ARtis. This project featured a story developing based on your location within Artis. The story was only auditive and it would let trough some real-life zoo sounds to be extra immersive. Unfortunately, it’s only online in the winter months so I couldn't go to the zoo to experience it.</p>
 				<figure>
-					<img src="img/scrum-board-day2.jpg" />
+					<img src="img/scrum-board-day2.jpg"  alt="Scrum board at day 2"/>
 					<caption>Picture by Stefano Toffoli; The scrum board at the end of the second day</caption>
 				</figure>
 				<p>At the start of the day we were told to make our post-it more concrete. We had removed some of our old post-its and tried to make them more descriptive.</p>
@@ -219,13 +219,13 @@
 				<h3>DAY 3</h3>
 				<p>Today we started with a guest lecture from Dr MSc Joost Broekens. He showed us a Tesla Model 3 as part of examples of robots, which made me immediately interested. I’m keeping a close eye on the development of Tesla Motors RoboTaxi’s and the Human Computer Interaction of its to be self-driving cars. He told us on a high level how machine learning and pattern recognition works. I had already seen hundreds of videos about this topic, but his talk was still interesting and he clearly knew where he was talking about.</p>
 				<figure>
-					<img src="img/led-matrix-eye.jpg">
+					<img src="img/led-matrix-eye.jpg" alt=""/>
 					<caption>Picture by Charlotte van Seventer; Eye on a LED MATRIX</caption>
 				</figure>
 				<p>We borrowed a LED Matrix and started to tinker with it. After reading some documentation online I pretty much understood how to program it. When the matrix was connected to my Arduino, I uploaded the code and noticed the LED Matrix staring at me with an eye. When I had put a lot of byte data in the code to make it blink the code became pretty much unreadable and almost impossible to code. Therefore, I opened my browser and Googled “LED Matrix Generator”. One of the first links gave brought me to a <a href="https://xantorohara.github.io/led-matrix-editor/">GitHub project</a> with the exact thing I was looking for. With this tool it was very easy to program different eyes and transitioning frames. It even gave the option to use 64-bit long integers instead of byte arrays. So, the code could be a lot shorter. I quickly made a stare, look around and blink function that made the eye really come to live.</p>
 				<p>Near the end of the day we received a MP3 Shield I ordered, but there was no time to test it. A micro SD card was also needed to make it work, therefor I decided to test it the next day.</p>
 				<figure>
-					<img src="img/scrum-board-day3.jpg" />
+					<img src="img/scrum-board-day3.jpg"  alt="Scrum board at day 3"/>
 					<caption>The scrum board at the end of the third day</caption>
 				</figure>
 				<p>By looking at our scrum board after the third day you can see that we made a lot of progress.</p>
@@ -234,17 +234,17 @@
 				<h3>DAY 4</h3>
 				<p>The fourth day started with a lecture again. This time it was Teun Verkerk whom held the quest lecture. He talked in great detail about his project BUQS which in essence where small artificial creatures that were making little noises. He emphasized how simple sounds can add a lot of life and character to an artificial creature. Another big take away was that we should avoid taking our creatures to for so their expressions would be in the uncanny valley. That basically means when that when your very close to perfectly mimicking a face, it would result in people seeing the face but know that something isn’t right. We learned to keep it simple and to not get lost in the details.</p>
 				<figure>
-					<img src="img/buqs.jpg">
+					<img src="img/buqs.jpg" alt=""/>
 					<caption>Picture by Charlotte van Seventer</caption>
 				</figure>
 				<p>After the lecture I started installing the MP3 shield on my Arduino and searched for the right libraries. This took longer than expected and I tried many different thinks. Then I noticed that the shield wasn’t fully connected to the Arduino. After fully installing, it worked like a charm. It played MP3 tracks that I installed on the Micro SD Card. The big downside of the MP3 shield was that it almost used every pin of the Arduino. So we couldn’t use it with the other plans. We discussed this in the group and Victorija pointed out that we shouldn’t make the creature to complex. We could accomplish a lot with just the Piezo speaker. So, we decided to ditch the MP3 shield and started working on the eyes and eyebrows in combination with the speaker. I was appointed to make the sounds of the creature for every emotional state it would get. After riding some loops with the tone function I was already satisfied by the result. When we combined the eyes from Charlotte and Karen with the short beeps and boops I created, the creature got a lot of character.</p>
 				<figure>
-					<img src="img/mp3-shield.jpg">
+					<img src="img/mp3-shield.jpg" alt=""/>
 					<caption>Picture by Karen Hernandez</caption>
 				</figure>
 				<p>The teachers made us come up with a promise we would make to the visitors of the expo the next week. As an example one of the teachers Chris made the promise to us that we would talk like Penguins. The example was a bit vague but I guess that was the point. After a little brainstorm session we concluded that we would promise our guests to let them stroke the beard. Which we thought of as very engaging. Victorija started to make a flow chart so we would know what we would need for our creature to work as intendend and she made blueprints of the design.</p>
 				<figure>
-					<img src="img/scrum-board-day4.jpg">
+					<img src="img/scrum-board-day4.jpg" alt="Scrum board at day 4" />
 					<caption>Picture by Karen Hernandez; Our scrum board at the end of day four</caption>
 				</figure>
 			</article>
@@ -257,12 +257,12 @@
 				</figure>
 				<p>We had a quick discussion of maybe buying a Arduino Mega so we would only need one Arduino, but we found a workaround splitting al the technologies to two Arduino UNO’s. I made a diagram using Fritzing to see if we would have enough (Pulse Width Modulation) ports to make it work.</p>
 				<figure>
-					<img src="img/requirements.jpg">
+					<img src="img/requirements.jpg" alt=""/>
 					<caption>Requirements for the creature prioritized using the MoSCoW method</caption>
 				</figure>
 				<p>We were happy with the progress thus far and could a enjoy our long Pentecost weekend. We made a planning of what we had left to do the next week. We had also made a list of requirements and a list of matrials.</p>
 				<figure>
-					<img src="img/scrum-board-day5.jpg">
+					<img src="img/scrum-board-day5.jpg"  alt="Scrum board at day 5" />
 					<caption>Picture by Karen Hernandez; Scrum board at the end of the fifth day</caption>
 				</figure>
 			</article>
@@ -276,12 +276,12 @@
 <code>}</code>
 </pre>
 				<figure>
-					<img src="img/eyebrows-day6.jpg">
+					<img src="img/eyebrows-day6.jpg" alt=""/>
 					<caption>Picture by Karen Hernandez; The eyebrows on the servos</caption>
 				</figure>
 				<p>The eyebrows added a lot of movement and character to our creature. That it were a couple of electronics hanging with jumper wires to an Arduino didn’t matter. We knew how it would look like when we would be done, because Viktorija made a lot of sketches of the finished product.</p>
 				<figure>
-					<img src="img/scrum-board-day6.jpg">
+					<img src="img/scrum-board-day6.jpg"  alt="Scrum board at day 6" />
 					<caption>Scrum board at the end of day seven</caption>
 				</figure>
 			</article>
@@ -289,22 +289,22 @@
 				<h3>DAY 7</h3>
 				<p>On day seven we were curious to see what happend to the foam. The foam didn’t expand much so we decided not to buy 14 cans of the stuff but fill all the cavities with crumbled newspapers and cardboard. When a nice organic foundation was laid they covered it up with a piece of crumbled up crafts paper. This turned out to work pretty well. We also covered the inside of the cave with aluminum foil to give it a cyberpunk look. Viktorija, Stefano and Charlotte worked hard on this.</p>
 				<figure>
-					<img src="img/cyberpunk-cave.jpg">
+					<img src="img/cyberpunk-cave.jpg" alt=""/>
 					<caption>Picture by Viktorija Libertytė; The cyberpunk inside of our cave</caption>
 				</figure>
 				<p>Meanwhile, Karen and I were optimizing the final code for our copper bearded caveman. We had snippets of every functionality and it was time to combine them. Karen tried to help me but at first I was quite stubborn. But eventually I let her convince me that her way of was better. I learned a few new tricks from Karen and we proceeded to implement  her ideas with mine.</p>
 				<figure>
-					<img src="img/code-debate.jpg">
+					<img src="img/code-debate.jpg" alt=""/>
 					<caption>Picture by Viktorija Libertytė; Karen and I debating the code</caption>
 				</figure>
 				<p>I told the group that I came across a plush frog in the Big Bazar that had the perfect dimensions for our caveman. Charlotte offered to go and buy it because she was going to the shops anyway to get supplies. When she was back our teacher Tim came by and said that we could maybe dye it because it would look to much like a toy. We took his feedback and all agreed he had a good point. But we didn’t want to commit to the frog right away so we decided to leave it for tomorrow.</p>
 				<figure>
-					<img src="img/froggy-caveman.jpg">
+					<img src="img/froggy-caveman.jpg" alt="Frog caveman hybride" />
 					<caption>Picture by Karen Hernandez; The neon green plush frog with our eyes, beard and eyebrows</caption>
 				</figure>
 				<p>At the end of the day we did commit to the frog and removed the eyes and plush insides, because Karen would try to dye the frog at home. In the evening send a picture in our WhatsApp group with the same bright green frog. A minor setback that we would tackle the next day.</p>
 				<figure>
-					<img src="img/scrum-board-day7.jpg">
+					<img src="img/scrum-board-day7.jpg" alt="Scrum board at day 7" />
 					<caption>Scrum board at the end of day seven</caption>
 				</figure>
 			</article>
@@ -312,22 +312,22 @@
 				<h3>DAY 8</h3>
 				<p>The last day before the expo and we still needed a lot to be done. We were relocated to our final exposition stand. Karen arrived with the frog skin and Viktorija would paint it with acrylic black paint. She first cut of the arms and legs to make test samples. This way she could see if it would hold after washing. She got the best result by just leaving the paint on and dry it with a hairdryer.</p>
 				<figure>
-					<img src="img/copperbeard-new-color.jpg">
+					<img src="img/copperbeard-new-color.jpg" alt="" />
 					<caption>Picture by Karen Hernandez; Getting a new look</caption>
 				</figure>
 				<p>I was soldering some janky connections and used a lot of heat shrink that I just received from AliExpress to prevent shorting the circuits. Then I taped all the wires to the Arduino’s to prevent them from coming lose. After everything was as robust as we could get it, Viktorija traced the outlines of the wheels on a piece of cardboard and we started to build the caveman. I marked the left and right servos for the eyebrows to put them under the freshy painted skin, while Viktorija cut out places for the LED eyes, servos and all the wires from the Styrofoam ball. After we put the skin over it and turned it on we were greeted with some very cool looking eyes. You could really see them true the fur and Viktorija cut away the long hairs so you could see them better. We first wanted to cut holes for the eyes but this was way cooler. </p>
 				<figure>
-					<img src="img/copperbeard-with-my-glasses.jpg">
+					<img src="img/copperbeard-with-my-glasses.jpg" alt="" />
 					<caption>Picture by Karen Hernandez; Copper beard wearing my glasses</caption>
 				</figure>
 				<p>Meanwhile Charlotte, Stefano and Karen finished the cave. I also made a couple changes to the driving code so that it would drive backwards into the cave in setup. So, the place where you turn it on is the place where it would meet the visitors of the Expo. We tested the Arduino connected to the head and everything looked like it was working. The driving Arduino was also working after a couple of test so we were ready to test tomorrow and make some finishing touches.</p>
 				<figure>
-					<img src="img/copperbeard-chilling-in-his-cave.jpg">
+					<img src="img/copperbeard-chilling-in-his-cave.jpg" alt="" />
 					<caption>Picture by Viktorija Libertytė; Copper beard chilling in his cave</caption>
 				</figure>
 				<p>We didn't use our scrumboard much this day because we where very busy with our own tasks and everything went smooth.</p>
 				<figure>
-					<img src="img/scrum-board-day8.jpg">
+					<img src="img/scrum-board-day8.jpg" alt="Scrum board at day 8" />
 					<caption>Picture by Karen Hernandez; Scrum board before the expo day</caption>
 				</figure>
 			</article>
@@ -335,12 +335,12 @@
 				<h3>DAY 9 | EXPO</h3>
 				<p>The longest day of the lab weeks arrived. 12 hours in the Maak Haven. We only needed to do a few test and then we could see what other people were doing. We connected one of our 9v batteries to both Arduino’s and our copper bearded cave man came alive. But when it hit the side of the cave it could drive properly so we decided to make guiderails. Fortunately, another group had some pieces of wood laying around and we could use them to guide our caveman. Vikorija put out some guidelines and I borrowed a jigsaw from yet another group. After cutting the pieces, we glued them together and tested the driving again.</p>
 				<figure>
-					<img src="img/hotglue.jpg">
+					<img src="img/hotglue.jpg" alt="Viktorija glueing the guiderails">
 					<caption>Glueing the guiderails</caption>
 				</figure>
 				<p>Meanwhile, our other group members laydown my LEDs I brought from home to decorated our stand. They also covered the both tables to make our stand unified, but would could also hide our backpacks this way. We struggled not to play with it to much because we needed al the batteries for the expo. We cleaned up around our stand and ate some well deserved pizza before our visitors came.</p>
 				<figure>
-					<img src="img/expo2.jpg">
+					<img src="img/expo2.jpg"alt="Copper Beard Caveman getting angry">
 					<caption>Picture by Karen Hernandez; He got angry a couple of times</caption>
 				</figure>
 				<p>The expo was a great success. It was really fun to see people reacted to our creation. Some people were skeptical and initially didn’t dare to touch his beard. But by reading our sign and seeing others do it, they didn’t hesitate to touch it. We got a lot of positive reactions and people thought it was really cute. Some people jolted or flinched when it got angry. That was pretty funny to watch. I asked some visitors what they thought of our creature and they told me that they really liked the look of it. Some were very interested in the mechanics and asked how it worked. I answered all there questions. Then I showed it to my family and girlfriend so they could see were I was working on for the last two weeks but also the last two years. They were very impressed and had a great time looking at all the projects. All in all it was a great experience and a great way to end the second year of my study.</p>
@@ -351,8 +351,8 @@
 				<h2>Product</h2>
 				<p>Meet Copper Beard Caveman, our artificial creature. He lives in his cave but when people walk up to him he wakes up and moves to them. He blinks his eyes and when you touch his beard he get happy and his eyes and eyebrows make that very clear. He doesn’t speak English or Dutch but beeps and boops at you to share his feelings. His emotional state changes rapidly, influenced by beard strokes, so be ware. If you leave him alone for to long he get back in his cape and goes to sleep.</p>
 				<figure>
-					<img src="img/expo1.jpg">
-					<caption>Picture by Charlotte van Seventer; Copperbeard the emotional Caveman</caption>
+					<img src="img/expo1.jpg" alt="Copper beard the emotional Caveman" />
+					<caption>Picture by Charlotte van Seventer; Copper beard the emotional Caveman</caption>
 				</figure>
 			</article>
 		</section>
